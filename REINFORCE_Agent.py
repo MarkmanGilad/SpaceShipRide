@@ -3,6 +3,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import torch.nn.functional as F
 from torch.distributions.categorical import Categorical
 
 class Memory:
@@ -40,6 +41,8 @@ class REINFORCE_Network (nn.Module):
         self.Relu = nn.ReLU()
         self.linear2 = nn.Linear(fc_dims, fc_dims)
         self.linear3 = nn.Linear(fc_dims, action_dim)
+        self.mean_layer = nn.Linear(fc_dims, action_dim)
+        self.std_layer = nn.Linear(fc_dims, action_dim)
         self.lr = lr
         self.optimizer = optim.Adam(self.parameters(), lr=lr)  
         # self.scheduler = optim.lr_scheduler.StepLR(self.optimizer, step_size=optim_step, gamma=optim_gamma)
@@ -53,9 +56,9 @@ class REINFORCE_Network (nn.Module):
         x = self.Relu(x)
         x = self.linear2(x)
         x = self.Relu(x)
-        x = self.linear3(x)
-        # dist = Categorical(logits=x)        # compute the softmax and more
-        return x
+        mean = torch.tanh(self.mean_layer(x)) # between (-1,1)
+        std = F.softplus(self.std_layer(x)) + 1e-6
+        return mean, std
     
     def load_params(self):
         self.load_state_dict(torch.load(self.checkpoint_file, weights_only=True))
@@ -65,7 +68,7 @@ class REINFORCE_Network (nn.Module):
 
 
 class REINFORCE_Agent:
-    def __init__(self, chkpt, player = 1, state_dim = 9, action_dim=9  ):
+    def __init__(self, chkpt, player = 1, state_dim = 14, action_dim=2  ):
         self.policy = REINFORCE_Network(chkpt=chkpt, state_dim=state_dim, action_dim=action_dim)
         self.player = player
         self.memory = Memory(self.policy.device)
@@ -81,7 +84,7 @@ class REINFORCE_Agent:
         reward (float)
         prob (tensor)
         '''
-        self.memory.store_memory(state.toTensor(), torch.tensor(action), torch.tensor(reward))
+        self.memory.store_memory(state, torch.tensor(action), torch.tensor(reward))
 
     def save_model(self):
         self.policy.save_params()
@@ -90,33 +93,28 @@ class REINFORCE_Agent:
         self.policy.load_params()
 
     def get_action(self, state, events = None, train = None):
-        state_tensor = state.toTensor().to(self.policy.device)
+        state_tensor = state.to(self.policy.device)
         with torch.no_grad():
-            logits = self.policy(state_tensor)
+            mean, std = self.policy(state_tensor)
         
-        mask = self.mask_illegal(state_tensor, logits)
-        masked_logits = logits + mask
-        dist = Categorical(logits=masked_logits)
-        action = dist.sample().item()
-        row, col = self.to_action(action)
-        return (row, col), action
+        dist = torch.distributions.Normal(mean, std)
+        action = dist.rsample()
+        F_thrust, T_spin = action.tolist()
+        return F_thrust, T_spin
 
-    def get_masked_dist (self, states_tensor):
-        logits = self.policy(states_tensor)
-        mask = self.mask_illegal(states_tensor, logits)
-        masked_logits = logits + mask
-        dist = Categorical(logits=masked_logits)
-        return dist
+    def get_actions_logs (self, states_tensor):
+        states_tensor = states_tensor.to(self.policy.device)
+        mean, std = self.policy(states_tensor)
+        dist = torch.distributions.Normal(mean, std)
+        actions = dist.rsample()
+        log_probs = dist.log_prob(actions).sum(dim=-1) 
+        return actions, log_probs
 
     def to_action(self, action_index):
         row = action_index // 3
         col = action_index % 3
         return row, col
-
-    def mask_illegal (self, states_tensor, logits):
-        mask = torch.zeros_like(logits, dtype=torch.float)
-        mask[states_tensor != 0] = -torch.inf    
-        return mask
+    
 
     def compute_G (self, rewards):
         G_returns = torch.zeros_like(rewards)
@@ -134,9 +132,8 @@ class REINFORCE_Agent:
         G = self.compute_G(rewards)
                             
         # Convert action_probs from list of 1 item tensor to a tensor 
-        dist = self.get_masked_dist(states)
+        dist = self.get_actions_logs(states)
         log_probs = dist.log_prob(actions)
-        
         
                 
         # Compute the loss using vectorized operations

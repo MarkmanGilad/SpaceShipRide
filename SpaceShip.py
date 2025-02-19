@@ -24,6 +24,7 @@ class SpaceShip(pygame.sprite.Sprite):
         self.mask = pygame.mask.from_surface(self.image)
         self.start_pos = (700, 500)
         # Define theta relative to up (0 means facing up)
+        self.centerx, self.centery = self.start_pos
         self.theta = 0  
         self.vx = 0
         self.vy = 0
@@ -49,8 +50,11 @@ class SpaceShip(pygame.sprite.Sprite):
         dx = self.vx * dt
         dy = self.vy * dt
 
-        self.rect.centerx += round(dx)
-        self.rect.centery += round(dy)
+        self.centerx += dx
+        self.centery += dy
+
+        self.rect.centerx = round(self.centerx)
+        self.rect.centery = round(self.centery)
         
 
         # Rotate the image to match the current theta
@@ -69,4 +73,4 @@ class SpaceShip(pygame.sprite.Sprite):
         self.vx = 0
         self.vy = 0
         self.omega = 0  # Angular velocity
-        self.rect.center = self.start_pos
+        self.centerx, self.centery = self.start_pos

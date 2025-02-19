@@ -1,5 +1,6 @@
 import torch
-
+import random
+import pygame
 from REINFORCE_Agent import REINFORCE_Agent
 from Environment import SpaceShipRide
 import wandb
@@ -18,26 +19,31 @@ class REINFORCE_Trainer:
         losses = []
         for epoch in range(epochs):
             print(epoch, end="\r")
-            state = self.env.reset()
-
+            state = self.env.restart()
+            self.env.step = 0
+            self.env.done = False
             ########### sample environment ###########
-            while not self.env.end_of_game(state):
-                action, action_index = self.agent.get_action(state)
-                after_state, reward1 = self.env.next_state(state, action)
-                if self.env.end_of_game(after_state):
-                    self.agent.remember(state, action_index, reward1)
-                    break
-                action2 = self.opponent.get_action(state=after_state)
-                next_state, reward2 = self.env.next_state(after_state, action2)
+            while not self.env.done:
+                self.env.step += 1
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        return
+                pygame.event.pump()
+                state = self.env.get_state()
+                action = (0.1, random.random()-0.5) #self.agent.get_action()
+                self.env.render(action)
+                reward = self.env.get_reward()
+                
                 #reward2 += reward1
-                self.agent.remember(state, action_index, reward2)
-                state = next_state
-
+                self.agent.remember(state, action, reward)
+                
+            
             ########### train ###########
+            print (f"\nstep: {self.env.step} reward: {self.env.get_reward()} ")
             self.agent.learn()
 
             ########### log ###########
-            score += reward1+reward2
+            score += reward
             if epoch !=0 and epoch % 100 == 0:
                 self.log_wandb(score=score, loss = self.agent.sum_loss/100, entropy = self.agent.sum_entropy/100)
                 print (f'chkpt: {self.chkpt} epoch: {epoch} score: {score} loss: {self.agent.sum_loss/100:.4e} entropy: {self.agent.sum_entropy/100:.4e}')
@@ -56,7 +62,6 @@ class REINFORCE_Trainer:
                 "policy_model":str(self.agent.policy), 
                  "gamma":self.agent.gamma, 
                  "lr":self.agent.policy.lr, 
-                 "opponent": type(self.opponent),
                  "entropy_coe": self.agent.entropy_coe
                 #  "optim_step":self.agent.optim_step, 
                 #  "optim_gamma":self.agent.optim_gamma,
@@ -77,7 +82,7 @@ class REINFORCE_Trainer:
 
 
 if __name__ == '__main__':
-    
+    torch.save(0, 'Data/chkpt')
     chkpt = torch.load('Data/chkpt')
     chkpt+=1
     torch.save(chkpt, 'Data/chkpt')

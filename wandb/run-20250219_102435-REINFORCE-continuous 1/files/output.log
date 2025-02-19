@@ -1,0 +1,11 @@
+0
+step: 54 reward: -100
+Traceback (most recent call last):
+  File "c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Trainer.py", line 90, in <module>
+    trainer.train(epochs=5000000)
+  File "c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Trainer.py", line 43, in train
+    self.agent.learn()
+  File "c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Agent.py", line 135, in learn
+    dist = self.get_masked_dist(states)
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'REINFORCE_Agent' object has no attribute 'get_masked_dist'

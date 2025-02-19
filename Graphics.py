@@ -1,6 +1,8 @@
 
 FPS = 60
 WIDTH, HEIGHT = 800, 600
+H_HEIGHT = 100
+
 
 #RGB
 RED = (255, 0, 0)
