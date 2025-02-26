@@ -1,0 +1,24 @@
+{"time":"2025-02-20T00:15:06.1304189+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"C:\\Users\\Gilad\\Markman Dropbox\\Gilad Markman\\Python\\SpaceShipRide\\wandb\\run-20250220_001505-REINFORCE-continuous 70\\logs\\debug-core.log"}
+{"time":"2025-02-20T00:15:06.2405318+02:00","level":"INFO","msg":"created new stream","id":"REINFORCE-continuous 70"}
+{"time":"2025-02-20T00:15:06.2405318+02:00","level":"INFO","msg":"stream: started","id":"REINFORCE-continuous 70"}
+{"time":"2025-02-20T00:15:06.2405318+02:00","level":"INFO","msg":"handler: started","stream_id":"REINFORCE-continuous 70"}
+{"time":"2025-02-20T00:15:06.2405318+02:00","level":"INFO","msg":"sender: started","stream_id":"REINFORCE-continuous 70"}
+{"time":"2025-02-20T00:15:06.2405318+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"REINFORCE-continuous 70"}
+{"time":"2025-02-20T00:15:06.6214692+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-20T00:15:16.6221908+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:15:26.6227983+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:15:36.6225527+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:15:46.6229367+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:15:56.6234554+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:16:06.6232446+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:16:16.623449+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:16:26.6238139+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:16:36.6236025+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:16:38.5264271+02:00","level":"INFO","msg":"stream: closing","id":"REINFORCE-continuous 70"}
+{"time":"2025-02-20T00:16:38.5264271+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-20T00:16:38.5269298+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-20T00:16:39.6515594+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-20T00:16:39.8772335+02:00","level":"INFO","msg":"handler: closed","stream_id":"REINFORCE-continuous 70"}
+{"time":"2025-02-20T00:16:39.8772335+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"REINFORCE-continuous 70"}
+{"time":"2025-02-20T00:16:39.8772335+02:00","level":"INFO","msg":"sender: closed","stream_id":"REINFORCE-continuous 70"}
+{"time":"2025-02-20T00:16:39.8777435+02:00","level":"INFO","msg":"stream: closed","id":"REINFORCE-continuous 70"}

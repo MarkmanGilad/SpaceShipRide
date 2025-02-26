@@ -1,0 +1,18 @@
+{"time":"2025-02-19T21:36:28.8885599+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"C:\\Users\\Gilad\\Markman Dropbox\\Gilad Markman\\Python\\SpaceShipRide\\wandb\\run-20250219_213628-REINFORCE-continuous 24\\logs\\debug-core.log"}
+{"time":"2025-02-19T21:36:28.9973035+02:00","level":"INFO","msg":"created new stream","id":"REINFORCE-continuous 24"}
+{"time":"2025-02-19T21:36:28.9973035+02:00","level":"INFO","msg":"stream: started","id":"REINFORCE-continuous 24"}
+{"time":"2025-02-19T21:36:28.9973035+02:00","level":"INFO","msg":"sender: started","stream_id":"REINFORCE-continuous 24"}
+{"time":"2025-02-19T21:36:28.9973035+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"REINFORCE-continuous 24"}
+{"time":"2025-02-19T21:36:28.9973035+02:00","level":"INFO","msg":"handler: started","stream_id":"REINFORCE-continuous 24"}
+{"time":"2025-02-19T21:36:29.26087+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-19T21:36:39.2612686+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-19T21:36:49.2623994+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-19T21:36:59.2624337+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-19T21:37:01.4413678+02:00","level":"INFO","msg":"stream: closing","id":"REINFORCE-continuous 24"}
+{"time":"2025-02-19T21:37:01.4413678+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-19T21:37:01.441873+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-19T21:37:02.1438105+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-19T21:37:02.3671157+02:00","level":"INFO","msg":"handler: closed","stream_id":"REINFORCE-continuous 24"}
+{"time":"2025-02-19T21:37:02.3671157+02:00","level":"INFO","msg":"sender: closed","stream_id":"REINFORCE-continuous 24"}
+{"time":"2025-02-19T21:37:02.3671157+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"REINFORCE-continuous 24"}
+{"time":"2025-02-19T21:37:02.3677317+02:00","level":"INFO","msg":"stream: closed","id":"REINFORCE-continuous 24"}

@@ -1,0 +1,157 @@
+0
+c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Agent.py:87: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  self.memory.store_memory(state, torch.tensor(action), torch.tensor(reward))
+step: 1 reward: -100
+1
+step: 167 reward: -100
+2
+step: 283 reward: -100
+3
+step: 197 reward: -100
+4
+step: 831 reward: -100
+5
+step: 315 reward: -100
+6
+step: 187 reward: -100
+7
+step: 642 reward: 100
+8
+step: 313 reward: -100
+9
+step: 176 reward: -100
+10
+step: 179 reward: -100
+11
+step: 233 reward: -100
+12
+step: 471 reward: -100
+13
+step: 642 reward: -100
+14
+step: 481 reward: -100
+15
+step: 224 reward: -100
+16
+step: 159 reward: -100
+17
+step: 368 reward: -100
+18
+step: 181 reward: -100
+19
+step: 484 reward: -100
+20
+step: 80 reward: -100
+21
+step: 52 reward: -100
+22
+step: 86 reward: -100
+23
+step: 135 reward: -100
+24
+step: 153 reward: -100
+25
+step: 80 reward: -100
+26
+step: 79 reward: -100
+27
+step: 76 reward: -100
+28
+step: 99 reward: -100
+29
+step: 61 reward: -100
+30
+step: 79 reward: -100
+31
+step: 248 reward: -100
+32
+step: 208 reward: -100
+33
+step: 46 reward: -100
+34
+step: 84 reward: -100
+35
+step: 72 reward: -100
+36
+step: 102 reward: -100
+37
+step: 382 reward: -100
+38
+step: 67 reward: -100
+39
+step: 69 reward: -100
+40
+step: 73 reward: -100
+41
+step: 63 reward: -100
+42
+step: 7 reward: -100
+43
+step: 33 reward: -100
+44
+step: 16 reward: -100
+45
+step: 25 reward: -100
+46
+step: 60 reward: -100
+47
+step: 95 reward: -100
+48
+step: 110 reward: -100
+49
+step: 53 reward: -100
+50
+step: 34 reward: -100
+51
+step: 58 reward: -100
+52
+step: 94 reward: -100
+53
+step: 22 reward: -100
+54
+step: 174 reward: -100
+55
+step: 160 reward: -100
+56
+step: 306 reward: -100
+57
+step: 159 reward: -100
+58
+step: 121 reward: -100
+59
+step: 94 reward: -100
+60
+step: 118 reward: -100
+61
+step: 26 reward: -100
+62
+step: 114 reward: -100
+63
+step: 218 reward: -100
+64
+step: 114 reward: -100
+65
+step: 138 reward: -100
+66
+step: 182 reward: -100
+67
+step: 318 reward: -100
+68
+step: 106 reward: -100
+69
+step: 127 reward: -100
+70
+step: 100 reward: -100
+71
+step: 377 reward: -100
+72
+step: 10 reward: -100
+73
+step: 202 reward: -100
+74
+step: 130 reward: -100
+75
+step: 140 reward: -100
+76
+step: 43 reward: -100
+77

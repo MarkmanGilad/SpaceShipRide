@@ -1,0 +1,48 @@
+c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Agent.py:87: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  self.memory.store_memory(state, torch.tensor(action), torch.tensor(reward))
+
+chkpt: 40 epoch: 0 score: 3858 loss: -0.7703586220741272 entropy: -0.030936524271965027
+
+chkpt: 40 epoch: 10 score: 2717 loss: 144.9160919189453 entropy: 0.1010710597038269
+
+chkpt: 40 epoch: 20 score: 316 loss: -155.0291290283203 entropy: 0.17553108930587769
+
+chkpt: 40 epoch: 30 score: 1266 loss: -333.75286865234375 entropy: 0.2099999636411667
+
+chkpt: 40 epoch: 40 score: 1933 loss: -428.2369689941406 entropy: 0.23583483695983887
+
+chkpt: 40 epoch: 50 score: 3327 loss: -387.6187438964844 entropy: 0.23683325946331024
+
+chkpt: 40 epoch: 60 score: 4415 loss: -362.05047607421875 entropy: 0.22967031598091125
+
+chkpt: 40 epoch: 70 score: 5338 loss: -364.51080322265625 entropy: 0.23060809075832367
+
+chkpt: 40 epoch: 80 score: 6322 loss: -377.84844970703125 entropy: 0.2366223931312561
+
+chkpt: 40 epoch: 90 score: 7316 loss: -388.66552734375 entropy: 0.23600547015666962
+
+chkpt: 40 epoch: 100 score: 8316 loss: -368.25115966796875 entropy: 0.2308219075202942
+
+chkpt: 40 epoch: 110 score: 9316 loss: -358.39404296875 entropy: 0.22639063000679016
+
+chkpt: 40 epoch: 120 score: 10316 loss: -344.5755615234375 entropy: 0.21686352789402008
+
+chkpt: 40 epoch: 130 score: 11316 loss: -355.2018737792969 entropy: 0.2222806066274643
+
+chkpt: 40 epoch: 140 score: 12316 loss: -361.7140808105469 entropy: 0.2269296646118164
+
+chkpt: 40 epoch: 150 score: 13316 loss: -360.43414306640625 entropy: 0.2271261215209961
+
+chkpt: 40 epoch: 160 score: 14305 loss: -374.0538024902344 entropy: 0.23131492733955383
+
+chkpt: 40 epoch: 170 score: 15322 loss: -386.6355285644531 entropy: 0.23362155258655548
+
+chkpt: 40 epoch: 180 score: 16228 loss: -382.4783630371094 entropy: 0.23209373652935028
+
+chkpt: 40 epoch: 190 score: 17287 loss: -386.8707275390625 entropy: 0.23597337305545807
+
+chkpt: 40 epoch: 200 score: 18079 loss: -402.2801513671875 entropy: 0.2391577512025833
+
+chkpt: 40 epoch: 210 score: 19249 loss: -398.75341796875 entropy: 0.23973408341407776
+
+chkpt: 40 epoch: 220 score: 20194 loss: -391.4976806640625 entropy: 0.23877014219760895

@@ -1,0 +1,7 @@
+{"time":"2025-02-19T19:07:32.7878744+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"C:\\Users\\Gilad\\Markman Dropbox\\Gilad Markman\\Python\\SpaceShipRide\\wandb\\run-20250219_190732-REINFORCE-continuous 6\\logs\\debug-core.log"}
+{"time":"2025-02-19T19:07:32.9029172+02:00","level":"INFO","msg":"created new stream","id":"REINFORCE-continuous 6"}
+{"time":"2025-02-19T19:07:32.9029172+02:00","level":"INFO","msg":"stream: started","id":"REINFORCE-continuous 6"}
+{"time":"2025-02-19T19:07:32.9029172+02:00","level":"INFO","msg":"handler: started","stream_id":"REINFORCE-continuous 6"}
+{"time":"2025-02-19T19:07:32.9029172+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"REINFORCE-continuous 6"}
+{"time":"2025-02-19T19:07:32.9029172+02:00","level":"INFO","msg":"sender: started","stream_id":"REINFORCE-continuous 6"}
+{"time":"2025-02-19T19:07:33.1607896+02:00","level":"INFO","msg":"Starting system monitor"}

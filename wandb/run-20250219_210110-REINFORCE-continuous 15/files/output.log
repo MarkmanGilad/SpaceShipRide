@@ -1,0 +1,144 @@
+c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Agent.py:87: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  self.memory.store_memory(state, torch.tensor(action), torch.tensor(reward))
+
+chkpt: 15 epoch: 1 score: -2 loss: -4.2484e+00 entropy: -1.6362e-01
+
+chkpt: 15 epoch: 2 score: -1 loss: -4.6980e+00 entropy: -1.2389e-01
+
+chkpt: 15 epoch: 3 score: -1 loss: -4.5063e+00 entropy: -1.1731e-01
+
+chkpt: 15 epoch: 4 score: -1 loss: -4.6178e+00 entropy: -1.2210e-01
+
+chkpt: 15 epoch: 5 score: -1 loss: -4.3689e+00 entropy: -1.1723e-01
+
+chkpt: 15 epoch: 6 score: -1 loss: -2.5594e+00 entropy: -1.0143e-01
+
+chkpt: 15 epoch: 7 score: -1 loss: -6.8741e+00 entropy: -7.0697e-02
+
+chkpt: 15 epoch: 8 score: -1 loss: -3.6109e+00 entropy: -9.2455e-02
+
+chkpt: 15 epoch: 9 score: -1 loss: -4.1776e+00 entropy: -1.1565e-01
+
+chkpt: 15 epoch: 10 score: -1 loss: -4.9862e+00 entropy: -1.2231e-01
+
+chkpt: 15 epoch: 11 score: -1 loss: -4.6330e+00 entropy: -1.2239e-01
+
+chkpt: 15 epoch: 12 score: -1 loss: -4.6950e+00 entropy: -1.2259e-01
+
+chkpt: 15 epoch: 13 score: -1 loss: -4.6215e+00 entropy: -1.2309e-01
+
+chkpt: 15 epoch: 14 score: -1 loss: -4.6976e+00 entropy: -1.2353e-01
+
+chkpt: 15 epoch: 15 score: -1 loss: -4.5901e+00 entropy: -1.2395e-01
+
+chkpt: 15 epoch: 16 score: -1 loss: -4.6920e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 17 score: -1 loss: -4.6720e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 18 score: -1 loss: -4.6403e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 19 score: -1 loss: -4.6733e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 20 score: -1 loss: -4.6360e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 21 score: -1 loss: -4.7145e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 22 score: -1 loss: -4.7101e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 23 score: -1 loss: -4.7097e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 24 score: -1 loss: -4.6837e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 25 score: -1 loss: -4.7158e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 26 score: -1 loss: -4.7393e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 27 score: -1 loss: -4.7089e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 28 score: -1 loss: -4.6968e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 29 score: -1 loss: -4.6683e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 30 score: -1 loss: -4.7363e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 31 score: -1 loss: -4.6828e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 32 score: -1 loss: -4.7924e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 33 score: -1 loss: -4.6920e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 34 score: -1 loss: -4.7173e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 35 score: -1 loss: -9.1995e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 36 score: -1 loss: -4.7441e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 37 score: -1 loss: -4.6768e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 38 score: -1 loss: -4.7023e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 39 score: -1 loss: -4.6462e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 40 score: -1 loss: -4.7051e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 41 score: -1 loss: -4.7044e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 42 score: -1 loss: -4.6985e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 43 score: -1 loss: -4.6796e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 44 score: -1 loss: -4.6850e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 45 score: -1 loss: -4.7368e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 46 score: -1 loss: -4.7011e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 47 score: -1 loss: -4.7332e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 48 score: -1 loss: -4.6367e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 49 score: -1 loss: -4.7016e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 50 score: -1 loss: -4.6758e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 51 score: -1 loss: -4.7306e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 52 score: -1 loss: -4.6617e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 53 score: -1 loss: -4.6858e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 54 score: -1 loss: -4.7539e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 55 score: -1 loss: -4.6937e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 56 score: -1 loss: -4.7857e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 57 score: -1 loss: -4.6410e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 58 score: -1 loss: -4.6768e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 59 score: -1 loss: -4.7080e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 60 score: -1 loss: -4.7188e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 61 score: -1 loss: -4.6639e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 62 score: -1 loss: -4.7066e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 63 score: -1 loss: -4.7192e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 64 score: -1 loss: -4.7422e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 65 score: -1 loss: -4.7252e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 66 score: -1 loss: -4.7401e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 67 score: -1 loss: -4.7102e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 68 score: -1 loss: -4.7280e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 69 score: -1 loss: -4.6697e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 70 score: -1 loss: -4.7010e+00 entropy: -1.2397e-01
+
+chkpt: 15 epoch: 71 score: -1 loss: -4.6749e+00 entropy: -1.2397e-01

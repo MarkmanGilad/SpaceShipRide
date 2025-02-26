@@ -1,0 +1,4 @@
+chkpt: 55 epoch: 0 step: 201 score: -586 loss: -4.707269191741943 entropy: 0.009435541927814484
+chkpt: 55 epoch: 1 step: 201 score: -334 loss: 3.5449321269989014 entropy: -0.006807949393987656
+chkpt: 55 epoch: 2 step: 187 score: -170 loss: 3.2819676399230957 entropy: -0.007678227499127388
+chkpt: 55 epoch: 3 step: 165 score: -2 loss: 1.5228996276855469 entropy: -0.007091186475008726

@@ -1,0 +1,22 @@
+2025-02-19 21:29:37,335 INFO    MainThread:27024 [wandb_setup.py:_flush():68] Current SDK version is 0.19.6
+2025-02-19 21:29:37,335 INFO    MainThread:27024 [wandb_setup.py:_flush():68] Configure stats pid to 27024
+2025-02-19 21:29:37,335 INFO    MainThread:27024 [wandb_setup.py:_flush():68] Loading settings from C:\Users\Gilad\.config\wandb\settings
+2025-02-19 21:29:37,335 INFO    MainThread:27024 [wandb_setup.py:_flush():68] Loading settings from C:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\wandb\settings
+2025-02-19 21:29:37,335 INFO    MainThread:27024 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-02-19 21:29:37,336 INFO    MainThread:27024 [wandb_init.py:setup_run_log_directory():637] Logging user logs to C:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\wandb\run-20250219_212937-REINFORCE-continuous 22\logs\debug.log
+2025-02-19 21:29:37,346 INFO    MainThread:27024 [wandb_init.py:setup_run_log_directory():638] Logging internal logs to C:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\wandb\run-20250219_212937-REINFORCE-continuous 22\logs\debug-internal.log
+2025-02-19 21:29:37,346 INFO    MainThread:27024 [wandb_init.py:init():756] calling init triggers
+2025-02-19 21:29:37,346 INFO    MainThread:27024 [wandb_init.py:init():761] wandb.init called with sweep_config: {}
+config: {'name': 'REINFORCE-continuous 22', 'device': 'cpu', 'policy_model': 'REINFORCE_Network(\n  (linear1): Linear(in_features=14, out_features=256, bias=True)\n  (Relu): ReLU()\n  (linear2): Linear(in_features=256, out_features=256, bias=True)\n  (linear3): Linear(in_features=256, out_features=2, bias=True)\n  (mean_layer): Linear(in_features=256, out_features=2, bias=True)\n  (std_layer): Linear(in_features=256, out_features=2, bias=True)\n)', 'gamma': 0.99, 'lr': 0.001, 'entropy_coe': 0.1, '_wandb': {}}
+2025-02-19 21:29:37,346 INFO    MainThread:27024 [wandb_init.py:init():789] starting backend
+2025-02-19 21:29:37,564 INFO    MainThread:27024 [wandb_init.py:init():793] sending inform_init request
+2025-02-19 21:29:37,589 INFO    MainThread:27024 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn, using: spawn
+2025-02-19 21:29:37,590 INFO    MainThread:27024 [wandb_init.py:init():808] backend started and connected
+2025-02-19 21:29:37,590 INFO    MainThread:27024 [wandb_init.py:init():901] updated telemetry
+2025-02-19 21:29:37,619 INFO    MainThread:27024 [wandb_init.py:init():936] communicating run to backend with 90.0 second timeout
+2025-02-19 21:29:37,982 INFO    MainThread:27024 [wandb_init.py:init():994] starting run threads in backend
+2025-02-19 21:29:38,013 INFO    MainThread:27024 [wandb_run.py:_console_start():2385] atexit reg
+2025-02-19 21:29:38,013 INFO    MainThread:27024 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2025-02-19 21:29:38,014 INFO    MainThread:27024 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2025-02-19 21:29:38,014 INFO    MainThread:27024 [wandb_run.py:_redirect():2325] Redirects installed.
+2025-02-19 21:29:38,016 INFO    MainThread:27024 [wandb_init.py:init():1036] run started, returning control to user process

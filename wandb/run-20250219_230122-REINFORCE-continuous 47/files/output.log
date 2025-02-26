@@ -1,0 +1,12 @@
+
+chkpt: 47 epoch: 0 score: -5571 loss: -36.699737548828125 entropy: -0.02926849201321602
+
+chkpt: 47 epoch: 10 score: -2417 loss: -23682.669921875 entropy: -0.17771515250205994
+
+chkpt: 47 epoch: 20 score: -507 loss: -54081.09375 entropy: -0.1534624993801117
+
+chkpt: 47 epoch: 30 score: -1221 loss: -41467.7578125 entropy: -0.15661564469337463
+
+chkpt: 47 epoch: 40 score: -197 loss: -17666.3671875 entropy: -0.1654975712299347
+
+chkpt: 47 epoch: 50 score: 1768 loss: -18788.09375 entropy: -0.16041837632656097

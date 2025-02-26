@@ -1,0 +1,32 @@
+c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Agent.py:87: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  self.memory.store_memory(state, torch.tensor(action), torch.tensor(reward))
+
+chkpt: 23 epoch: 1 score: -2 loss: -1.9570e+01 entropy: -2.4240e-01
+
+chkpt: 23 epoch: 2 score: -1 loss: -8.6097e+00 entropy: -1.2396e-01
+
+chkpt: 23 epoch: 3 score: -1 loss: -1.3279e+01 entropy: -1.2198e-01
+
+chkpt: 23 epoch: 4 score: -1 loss: -1.3293e+01 entropy: -1.2395e-01
+
+chkpt: 23 epoch: 5 score: -1 loss: -1.3214e+01 entropy: -1.2397e-01
+
+chkpt: 23 epoch: 6 score: -1 loss: -1.3236e+01 entropy: -1.2397e-01
+
+chkpt: 23 epoch: 7 score: -1 loss: -1.3197e+01 entropy: -1.2397e-01
+
+chkpt: 23 epoch: 8 score: -1 loss: -1.3216e+01 entropy: -1.2397e-01
+
+chkpt: 23 epoch: 9 score: -1 loss: -1.3120e+01 entropy: -1.2397e-01
+
+chkpt: 23 epoch: 10 score: -1 loss: -1.3262e+01 entropy: -1.2397e-01
+
+chkpt: 23 epoch: 11 score: -1 loss: -1.3265e+01 entropy: -1.2397e-01
+
+chkpt: 23 epoch: 12 score: -1 loss: -1.2168e+01 entropy: -1.2397e-01
+
+chkpt: 23 epoch: 13 score: -1 loss: -1.3304e+01 entropy: -1.2397e-01
+
+chkpt: 23 epoch: 14 score: -1 loss: -1.3309e+01 entropy: -1.2397e-01
+
+chkpt: 23 epoch: 15 score: -1 loss: -1.3240e+01 entropy: -1.2397e-01

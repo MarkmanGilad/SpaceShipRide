@@ -5,7 +5,7 @@ class Human_Agent:
         self.action = 0
         
 
-    def get_Action (self):
+    def get_action (self, state = None):
         keys = pygame.key.get_pressed()
         F_thrust = 0
         T_spin = 0

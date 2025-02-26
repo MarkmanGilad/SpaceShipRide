@@ -1,0 +1,22 @@
+{"time":"2025-02-20T00:29:34.8658122+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"C:\\Users\\Gilad\\Markman Dropbox\\Gilad Markman\\Python\\SpaceShipRide\\wandb\\run-20250220_002934-REINFORCE-continuous 83\\logs\\debug-core.log"}
+{"time":"2025-02-20T00:29:34.9930247+02:00","level":"INFO","msg":"created new stream","id":"REINFORCE-continuous 83"}
+{"time":"2025-02-20T00:29:34.9930247+02:00","level":"INFO","msg":"stream: started","id":"REINFORCE-continuous 83"}
+{"time":"2025-02-20T00:29:34.9930247+02:00","level":"INFO","msg":"handler: started","stream_id":"REINFORCE-continuous 83"}
+{"time":"2025-02-20T00:29:34.9930247+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"REINFORCE-continuous 83"}
+{"time":"2025-02-20T00:29:34.9930247+02:00","level":"INFO","msg":"sender: started","stream_id":"REINFORCE-continuous 83"}
+{"time":"2025-02-20T00:29:35.4044985+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-20T00:29:45.405178+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:29:55.4051711+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:30:05.4055725+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:30:15.4059414+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:30:25.405592+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:30:27.1090767+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/giladmarkman/REINFORCE-continuous/REINFORCE-continuous%2083/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-02-20T00:30:35.4058594+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:30:35.8337698+02:00","level":"INFO","msg":"stream: closing","id":"REINFORCE-continuous 83"}
+{"time":"2025-02-20T00:30:35.8337698+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-20T00:30:35.8342951+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-20T00:30:36.5258987+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-20T00:30:36.7565795+02:00","level":"INFO","msg":"handler: closed","stream_id":"REINFORCE-continuous 83"}
+{"time":"2025-02-20T00:30:36.7565795+02:00","level":"INFO","msg":"sender: closed","stream_id":"REINFORCE-continuous 83"}
+{"time":"2025-02-20T00:30:36.7565795+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"REINFORCE-continuous 83"}
+{"time":"2025-02-20T00:30:36.7580826+02:00","level":"INFO","msg":"stream: closed","id":"REINFORCE-continuous 83"}

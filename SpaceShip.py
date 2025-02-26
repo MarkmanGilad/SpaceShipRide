@@ -22,7 +22,7 @@ class SpaceShip(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(center=pos)
         self.radius = 30
         self.mask = pygame.mask.from_surface(self.image)
-        self.start_pos = (700, 500)
+        self.start_pos = pos
         # Define theta relative to up (0 means facing up)
         self.centerx, self.centery = self.start_pos
         self.theta = 0  
@@ -31,12 +31,18 @@ class SpaceShip(pygame.sprite.Sprite):
         self.omega = 0  # Angular velocity
         
         self.max_thrust = 100
-        self.max_spin = 3
+        self.max_spin = 1
 
     def move(self, dt, F_thrust, T_spin):
         # Update angular velocity and angle
         self.omega = self.max_spin * T_spin
         self.theta += self.omega * dt
+
+        # Constrain theta to [0, 2*pi)
+        self.theta %= (2 * math.pi)
+
+        # Constarint F-thrust
+        F_thrust = max(-1, min(1, F_thrust))
 
         # Compute acceleration based on the corrected forward vector
         ax = - (self.max_thrust * F_thrust) * math.sin(self.theta)
@@ -74,3 +80,4 @@ class SpaceShip(pygame.sprite.Sprite):
         self.vy = 0
         self.omega = 0  # Angular velocity
         self.centerx, self.centery = self.start_pos
+        self.rect.center = self.start_pos

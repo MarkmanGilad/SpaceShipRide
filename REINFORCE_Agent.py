@@ -4,7 +4,8 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
-from torch.distributions.categorical import Categorical
+from torch.distributions import Normal
+
 
 class Memory:
     '''
@@ -38,7 +39,7 @@ class REINFORCE_Network (nn.Module):
     def __init__(self, state_dim, action_dim, lr=0.001, fc_dims=256, chkpt=1, optim_step = 100, optim_gamma = 0.9):
         super().__init__()
         self.linear1 = nn.Linear(state_dim, fc_dims)
-        self.Relu = nn.ReLU()
+        self.Relu = nn.LeakyReLU()
         self.linear2 = nn.Linear(fc_dims, fc_dims)
         self.linear3 = nn.Linear(fc_dims, action_dim)
         self.mean_layer = nn.Linear(fc_dims, action_dim)
@@ -56,7 +57,8 @@ class REINFORCE_Network (nn.Module):
         x = self.Relu(x)
         x = self.linear2(x)
         x = self.Relu(x)
-        mean = torch.tanh(self.mean_layer(x)) # between (-1,1)
+        mean = self.mean_layer(x)
+        # mean = torch.tanh(mean)
         std = F.softplus(self.std_layer(x)) + 1e-6
         return mean, std
     
@@ -72,19 +74,18 @@ class REINFORCE_Agent:
         self.policy = REINFORCE_Network(chkpt=chkpt, state_dim=state_dim, action_dim=action_dim)
         self.player = player
         self.memory = Memory(self.policy.device)
-        self.gamma = 0.95
+        self.gamma = 0.995
         self.entropy_coe = 0.1
         
         self.sum_loss = 0  # for logging
         self.sum_entropy = 0 # for logging
-        
 
     def remember (self, state, action, reward):
         '''
         reward (float)
         prob (tensor)
         '''
-        self.memory.store_memory(state, torch.tensor(action), torch.tensor(reward))
+        self.memory.store_memory(state, action, torch.tensor(reward))
 
     def save_model(self):
         self.policy.save_params()
@@ -92,30 +93,25 @@ class REINFORCE_Agent:
     def load_model(self):
         self.policy.load_params()
 
-    def get_action(self, state, events = None, train = None):
+    def get_action(self, state, events = None, train = False):
         state_tensor = state.to(self.policy.device)
         with torch.no_grad():
             mean, std = self.policy(state_tensor)
         
-        dist = torch.distributions.Normal(mean, std)
+        dist = Normal(mean, std)
         action = dist.rsample()
-        F_thrust, T_spin = action.tolist()
-        return F_thrust, T_spin
+        F_thrust, T_spin = action[0].item(), action[1].item()
 
-    def get_actions_logs (self, states_tensor):
+        if train:
+            return (F_thrust, T_spin), action
+        return F_thrust, T_spin
+    
+    def get_dist (self, states_tensor):
         states_tensor = states_tensor.to(self.policy.device)
         mean, std = self.policy(states_tensor)
-        dist = torch.distributions.Normal(mean, std)
-        actions = dist.rsample()
-        log_probs = dist.log_prob(actions).sum(dim=-1) 
-        return actions, log_probs
-
-    def to_action(self, action_index):
-        row = action_index // 3
-        col = action_index % 3
-        return row, col
+        dist = Normal(mean, std)
+        return dist
     
-
     def compute_G (self, rewards):
         G_returns = torch.zeros_like(rewards)
         G = 0
@@ -131,13 +127,11 @@ class REINFORCE_Agent:
         
         G = self.compute_G(rewards)
                             
-        # Convert action_probs from list of 1 item tensor to a tensor 
-        dist = self.get_actions_logs(states)
-        log_probs = dist.log_prob(actions)
-        
+        dist = self.get_dist(states)
+        log_probs = dist.log_prob(actions).sum(dim=-1)
                 
         # Compute the loss using vectorized operations
-        policy_loss = -(G * log_probs).sum()
+        policy_loss = -(G * log_probs).mean()
         
         # Add Entropy regularization
         entropy = dist.entropy().mean()
@@ -153,10 +147,9 @@ class REINFORCE_Agent:
         #### for logging
         self.sum_loss += loss.detach()
         self.sum_entropy += dist.entropy().detach().mean()
-
     
     def __call__(self, *args, **kwds):
-        return self.choose_action(*args)
+        return self.get_action(*args)
 
 
     
