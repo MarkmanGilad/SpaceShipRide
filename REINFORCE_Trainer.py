@@ -12,9 +12,9 @@ class REINFORCE_Trainer:
         self.env:SpaceShipRide = SpaceShipRide()
         self.chkpt = chkpt
 
-    def train(self, epochs=100000, gamma = 0.99, lr=0.0001):
+    def train(self, epochs=100000):
         self.init_wandb(project_name="REINFORCE-continuous",chkpt=self.chkpt,resume=False)
-        
+        wins = 0
         for epoch in range(epochs):
             self.env.restart()
             self.env.step = 0
@@ -34,21 +34,27 @@ class REINFORCE_Trainer:
                 
                 #reward2 += reward1
                 self.agent.remember(state, action_tensor, reward)
-                score += reward    
+                score += reward
+
             
             ########### train ###########
             # print (f"\nstep: {self.env.step} reward: {self.env.get_reward()} ")
             self.agent.learn()
 
             ########### log ###########
-            
+            wins += int(self.env.win)
             if epoch % 1 ==0 :
                 s = self.env.step
                 self.log_wandb(score=score, loss = self.agent.sum_loss/s, entropy = self.agent.sum_entropy/s)
-                print ( f'chkpt: {self.chkpt} epoch: {epoch} step: {self.env.step} score: {score} loss: {self.agent.sum_loss/s}',
+                print ( f'chkpt: {self.chkpt} epoch: {epoch} step: {self.env.step} wins: {wins} score: {score} loss: {self.agent.sum_loss/s}',
                         f'entropy: {self.agent.sum_entropy/s} action_tensor: {action_tensor} action {action}')
                 self.agent.sum_loss = 0
                 self.agent.sum_entropy = 0
+                if epoch %  100 == 0:
+                    self.log_wandb(wins=wins)
+                    wins = 0    
+
+                    
 
 
         self.agent.save_model()
@@ -81,7 +87,6 @@ class REINFORCE_Trainer:
 
 
 if __name__ == '__main__':
-    torch.save(215, 'Data/chkpt')
     try:
         chkpt = torch.load('Data/chkpt')
     except:

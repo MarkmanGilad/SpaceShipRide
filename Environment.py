@@ -36,7 +36,7 @@ class SpaceShipRide:
         self.reward = 0
         self.step = 0
         self.max_step = 1000
-        self.score = 0
+        self.win = False
         
         # self.dis_sun = self.calc_dist_sun()
         self.dis_dead_star = self.calc_dist_dead_star()
@@ -44,14 +44,17 @@ class SpaceShipRide:
 
     def init_rewards(self):
         self.losse = -50
-        self.win = 100
-        self.dist_reward = 10
-        self.fuel_reward = -1
+        self.win = 200
+        self.dist_reward = 1
+        self.fuel_reward = -0.1
         self.time_reward = -0.01
         self.space_ship.fuel_cost = 1
-        self.space_ship.fuel_burn_rate = 1  # Base fuel consumption per action
-        self.space_ship.eff_factor = 10  # Increases at full power
+        self.space_ship.fuel_burn_rate = 0.5  # Base fuel consumption per action
+        self.space_ship.eff_factor = 0.1  # Increases at full power
         self.space_ship.fuel_spin_rate = 10  # Fuel cost multiplier for spin
+
+        
+        
 
     def render (self, action):
         thrust, spin = action
@@ -72,11 +75,12 @@ class SpaceShipRide:
         elif pygame.sprite.collide_mask(self.space_ship, self.dead_star):
             self.done = True
             self.reward = self.win
-            self.score += 1
+            self.win = True
+            
 
         if self.step % 10 == 0:
             self.write(f"time: {self.max_step-self.step}     fuel: {self.space_ship.fuel:.1f}      dist to star {self.calc_dist_dead_star():.1f}")
-            self.write(f"score: {self.score}     reward: {self.get_reward():.2f} ", pos=(10,50))
+            self.write(f"reward: {self.get_reward():.2f} ", pos=(10,50))
             self.blit_header()
         self.blit_main()
         pygame.display.update()
@@ -140,7 +144,7 @@ class SpaceShipRide:
         self.reward = 0
         self.space_ship.restart()
         self.dis_dead_star = self.calc_dist_dead_star()
-        self.score = 0
+        self.win = False
 
     def calc_dist_sun (self):
         return abs(self.sun.rect.centerx - self.space_ship.rect.centerx) + abs(self.sun.rect.centery - self.space_ship.rect.centery)

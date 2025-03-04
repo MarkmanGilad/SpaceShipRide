@@ -37,7 +37,7 @@ class Memory:
     
 
 class REINFORCE_Network (nn.Module):
-    def __init__(self, state_dim, action_dim, lr=0.00001, fc_dims=256, chkpt=1, optim_step = 100, optim_gamma = 0.9):
+    def __init__(self, state_dim, action_dim, lr=0.0001, fc_dims=256, chkpt=1, optim_step = 100, optim_gamma = 0.9):
         super().__init__()
         self.linear1 = nn.Linear(state_dim, fc_dims)
         self.relu = nn.ReLU()

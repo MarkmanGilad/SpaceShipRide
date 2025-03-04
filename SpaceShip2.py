@@ -28,7 +28,7 @@ class SpaceShip(pygame.sprite.Sprite):
         # Limits
         self.max_acc = 1         # max acceleration pixels per frame^2
         self.max_spin = (2 * math.pi ) / 24 # maximum spin per frame
-        self.v_opt = 5   # pixels per frame
+        self.v_opt = 2   # pixels per frame
 
         # Friction parameters
         self.friction = 0.05  # linear slow down friction
@@ -36,9 +36,6 @@ class SpaceShip(pygame.sprite.Sprite):
         # Fuel system
         self.max_fuel = 1000
         self.fuel = self.max_fuel
-        self.fuel_burn_rate = 0.01  # Base fuel consumption per action
-        self.eff_factor = 0.1  # max efficiency at v_opt
-        self.fuel_spin_rate = 10
         
         
 
