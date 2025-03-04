@@ -87,6 +87,7 @@ class SpaceShip(pygame.sprite.Sprite):
         rotated_image = pygame.transform.rotate(self.original_image, math.degrees(self.theta))
         self.image = rotated_image
         self.rect = self.image.get_rect(center=self.rect.center)
+        self.mask = pygame.mask.from_surface(self.image)
 
     def draw(self, surface):
         surface.blit(self.image, self.rect)

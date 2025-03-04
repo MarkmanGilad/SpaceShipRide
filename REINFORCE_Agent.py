@@ -37,7 +37,7 @@ class Memory:
     
 
 class REINFORCE_Network (nn.Module):
-    def __init__(self, state_dim, action_dim, lr=0.0001, fc_dims=256, chkpt=1, optim_step = 100, optim_gamma = 0.9):
+    def __init__(self, state_dim, action_dim, lr=0.00001, fc_dims=256, chkpt=1, optim_step = 100, optim_gamma = 0.9):
         super().__init__()
         self.linear1 = nn.Linear(state_dim, fc_dims)
         self.relu = nn.ReLU()
@@ -56,9 +56,10 @@ class REINFORCE_Network (nn.Module):
         x = self.relu(self.linear1(state))
         x = self.relu(self.linear2(x))
 
-        mean = self.mean_layer(x)
-        mean[:, 0] = (torch.tanh(mean[:, 0]) + 1) / 2       # Thrust: [0,1]
-        mean[:, 1] = torch.tanh(mean[:, 1])                 # Spin: [-1,1]
+        mean_raw = self.mean_layer(x)
+        thrust = (torch.tanh(mean_raw[:, 0]) + 1) / 2  # Thrust in [0,1]
+        spin = torch.tanh(mean_raw[:, 1])              # Spin in [-1,1]
+        mean = torch.stack([thrust, spin], dim=1)
         std = F.softplus(self.std_layer(x)) + 1e-6          # Ensure std is positive
         return mean, std
     

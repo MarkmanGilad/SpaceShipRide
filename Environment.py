@@ -47,7 +47,7 @@ class SpaceShipRide:
         self.win = 200
         self.dist_reward = 1
         self.fuel_reward = -0.1
-        self.time_reward = -0.01
+        self.time_reward = -0.1
         self.space_ship.fuel_cost = 1
         self.space_ship.fuel_burn_rate = 0.5  # Base fuel consumption per action
         self.space_ship.eff_factor = 0.1  # Increases at full power
@@ -150,7 +150,7 @@ class SpaceShipRide:
         return abs(self.sun.rect.centerx - self.space_ship.rect.centerx) + abs(self.sun.rect.centery - self.space_ship.rect.centery)
         
     def calc_dist_dead_star(self):
-        return abs(self.dead_star.rect.centerx - self.space_ship.rect.centerx) + abs(self.dead_star.rect.centery - self.space_ship.rect.centery)
+        return ((self.dead_star.rect.centerx - self.space_ship.rect.centerx)**2 + (self.dead_star.rect.centery - self.space_ship.rect.centery)**2)**0.5
         
     def write(self, txt, pos=(10,10)):
         font = pygame.font.SysFont("Arial", 36)
