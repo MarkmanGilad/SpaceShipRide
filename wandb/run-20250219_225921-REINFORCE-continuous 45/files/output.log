@@ -1,0 +1,10 @@
+c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Agent.py:87: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  self.memory.store_memory(state, torch.tensor(action), torch.tensor(reward))
+
+chkpt: 45 epoch: 0 score: -1316 loss: -14.715611457824707 entropy: -0.03470193222165108
+
+chkpt: 45 epoch: 10 score: 478 loss: -4488.1826171875 entropy: -0.5697894096374512
+
+chkpt: 45 epoch: 20 score: 1308 loss: -3503.753662109375 entropy: -0.6621869802474976
+
+chkpt: 45 epoch: 30 score: 2138 loss: -3606.43896484375 entropy: -0.6737268567085266

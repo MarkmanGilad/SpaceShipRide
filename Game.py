@@ -1,7 +1,7 @@
 # Animation
 import pygame
 from Graphics import *
-from SpaceShip import SpaceShip
+from SpaceShip2 import SpaceShip
 from Star import Star
 
 pygame.init()
@@ -11,14 +11,14 @@ clock = pygame.time.Clock()
 
 # Load and scale spaceship image
 space_ship_img = pygame.image.load("img/spacecraft.png")
-space_ship_img = pygame.transform.scale(space_ship_img, (60, 60))
-space_ship = SpaceShip(space_ship_img, (700, 500))
+space_ship_img = pygame.transform.scale(space_ship_img, (40, 40))
+space_ship = SpaceShip(space_ship_img, (500, 650))
 
-sun_img = pygame.image.load("img/sun.png")
-sun = Star(sun_img, (100,100))
+# sun_img = pygame.image.load("img/sun.png")
+# sun = Star(sun_img, (700,500))
 
 dead_star_img = pygame.image.load("img/starwars.png")
-dead_star = Star(dead_star_img, (400,300), scale=(150,150))
+dead_star = Star(dead_star_img, (100,100), scale=(30,30))
 
 F_thrust = 0
 T_spin = 0
@@ -49,12 +49,12 @@ while run:
     space_ship.update(dt, F_thrust, T_spin)
     space_ship.draw(screen)
     # sun.move()
-    sun.draw(screen)  
+    # sun.draw(screen)  
     dead_star.draw(screen)
 
-    if pygame.sprite.collide_mask(space_ship, sun):
-        color = pygame.Color('LightGreen')
-    elif pygame.sprite.collide_mask(space_ship, dead_star):
+    # if pygame.sprite.collide_mask(space_ship, sun):
+    #     color = pygame.Color('LightGreen')
+    if pygame.sprite.collide_mask(space_ship, dead_star):
         color = pygame.Color('Red')
     else:
         color = LIGHTGRAY

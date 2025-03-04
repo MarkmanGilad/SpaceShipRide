@@ -1,0 +1,12 @@
+{"time":"2025-02-20T00:21:21.6779879+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"C:\\Users\\Gilad\\Markman Dropbox\\Gilad Markman\\Python\\SpaceShipRide\\wandb\\run-20250220_002121-REINFORCE-continuous 74\\logs\\debug-core.log"}
+{"time":"2025-02-20T00:21:21.7862076+02:00","level":"INFO","msg":"created new stream","id":"REINFORCE-continuous 74"}
+{"time":"2025-02-20T00:21:21.7862076+02:00","level":"INFO","msg":"stream: started","id":"REINFORCE-continuous 74"}
+{"time":"2025-02-20T00:21:21.7862076+02:00","level":"INFO","msg":"handler: started","stream_id":"REINFORCE-continuous 74"}
+{"time":"2025-02-20T00:21:21.7862076+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"REINFORCE-continuous 74"}
+{"time":"2025-02-20T00:21:21.7862076+02:00","level":"INFO","msg":"sender: started","stream_id":"REINFORCE-continuous 74"}
+{"time":"2025-02-20T00:21:22.0751206+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-20T00:21:32.075579+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:21:42.0757277+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:21:52.0758823+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:22:02.0759273+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-20T00:22:12.0763585+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}

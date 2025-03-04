@@ -1,0 +1,14 @@
+0
+Traceback (most recent call last):
+  File "c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Trainer.py", line 92, in <module>
+    trainer.train(epochs=1000000)
+  File "c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Trainer.py", line 34, in train
+    self.env.render(action)
+  File "c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\Environment.py", line 48, in render
+    self.space_ship.update(dt, F_thrust, T_spin)
+  File "c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\SpaceShip.py", line 69, in update
+    self.move(dt, F_thrust, T_spin)
+  File "c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\SpaceShip.py", line 56, in move
+    self.rect.centerx = round(self.centerx)
+                        ^^^^^^^^^^^^^^^^^^^
+TypeError: type Tensor doesn't define __round__ method

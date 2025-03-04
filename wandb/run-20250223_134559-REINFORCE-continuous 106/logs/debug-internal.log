@@ -1,0 +1,33 @@
+{"time":"2025-02-23T13:45:59.1250097+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"C:\\Users\\Gilad\\Markman Dropbox\\Gilad Markman\\Python\\SpaceShipRide\\wandb\\run-20250223_134559-REINFORCE-continuous 106\\logs\\debug-core.log"}
+{"time":"2025-02-23T13:45:59.2328704+02:00","level":"INFO","msg":"created new stream","id":"REINFORCE-continuous 106"}
+{"time":"2025-02-23T13:45:59.2328704+02:00","level":"INFO","msg":"stream: started","id":"REINFORCE-continuous 106"}
+{"time":"2025-02-23T13:45:59.2328704+02:00","level":"INFO","msg":"handler: started","stream_id":"REINFORCE-continuous 106"}
+{"time":"2025-02-23T13:45:59.2328704+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"REINFORCE-continuous 106"}
+{"time":"2025-02-23T13:45:59.2328704+02:00","level":"INFO","msg":"sender: started","stream_id":"REINFORCE-continuous 106"}
+{"time":"2025-02-23T13:45:59.5204301+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-23T13:46:09.5204642+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:46:19.5206321+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:46:29.5208748+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:46:39.5207657+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:46:49.5209315+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:46:59.520654+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:47:09.5209749+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:47:19.520985+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:47:29.5206781+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:47:39.5208283+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:47:49.5205734+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:47:59.5208529+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:48:09.5209576+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:48:19.5209385+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:48:29.5211395+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:48:39.5205084+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:48:49.5208785+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:48:59.5206815+02:00","level":"ERROR","msg":"monitor: disk: error sampling metrics: Incorrect function."}
+{"time":"2025-02-23T13:49:05.8391528+02:00","level":"INFO","msg":"stream: closing","id":"REINFORCE-continuous 106"}
+{"time":"2025-02-23T13:49:05.8391528+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-23T13:49:05.8396588+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-23T13:49:06.8747631+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-23T13:49:07.1172261+02:00","level":"INFO","msg":"handler: closed","stream_id":"REINFORCE-continuous 106"}
+{"time":"2025-02-23T13:49:07.1172261+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"REINFORCE-continuous 106"}
+{"time":"2025-02-23T13:49:07.1172261+02:00","level":"INFO","msg":"sender: closed","stream_id":"REINFORCE-continuous 106"}
+{"time":"2025-02-23T13:49:07.1172261+02:00","level":"INFO","msg":"stream: closed","id":"REINFORCE-continuous 106"}

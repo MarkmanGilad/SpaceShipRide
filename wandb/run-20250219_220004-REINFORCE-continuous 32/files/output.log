@@ -1,0 +1,1222 @@
+c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Agent.py:87: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  self.memory.store_memory(state, torch.tensor(action), torch.tensor(reward))
+
+chkpt: 32 epoch: 0 score: -2886 loss: 4182.53515625 entropy: -2.0790631771087646
+
+chkpt: 32 epoch: 1 score: 989 loss: 3221.73291015625 entropy: -3.2079694271087646
+
+chkpt: 32 epoch: 2 score: 4670 loss: -9777.970703125 entropy: -3.7934820652008057
+
+chkpt: 32 epoch: 3 score: -1736 loss: 402.5267333984375 entropy: -3.578749656677246
+
+chkpt: 32 epoch: 4 score: -6442 loss: 18344.966796875 entropy: -3.4291574954986572
+
+chkpt: 32 epoch: 5 score: 3150 loss: 7681.02880859375 entropy: -3.4489808082580566
+
+chkpt: 32 epoch: 6 score: 863 loss: 6279.796875 entropy: -3.606581926345825
+
+chkpt: 32 epoch: 7 score: -4904 loss: 23436.892578125 entropy: -3.5263092517852783
+
+chkpt: 32 epoch: 8 score: 3673 loss: 7786.53759765625 entropy: -3.528745412826538
+
+chkpt: 32 epoch: 9 score: 3353 loss: 488.0228576660156 entropy: -3.669971227645874
+
+chkpt: 32 epoch: 10 score: -144 loss: 1179.3292236328125 entropy: -3.6699886322021484
+
+chkpt: 32 epoch: 11 score: 251 loss: 340.5677185058594 entropy: -3.6227097511291504
+
+chkpt: 32 epoch: 12 score: -2518 loss: 6734.53857421875 entropy: -3.6253790855407715
+
+chkpt: 32 epoch: 13 score: 945 loss: 2317.484130859375 entropy: -3.731546401977539
+
+chkpt: 32 epoch: 14 score: -387 loss: 5916.57177734375 entropy: -3.5917434692382812
+
+chkpt: 32 epoch: 15 score: -994 loss: 7300.8115234375 entropy: -3.681138515472412
+
+chkpt: 32 epoch: 16 score: 2418 loss: -126.47749328613281 entropy: -3.5632688999176025
+
+chkpt: 32 epoch: 17 score: -5030 loss: 14905.568359375 entropy: -3.548978090286255
+
+chkpt: 32 epoch: 18 score: 3654 loss: 3325.9453125 entropy: -3.7681453227996826
+
+chkpt: 32 epoch: 19 score: -78 loss: 3381.18896484375 entropy: -3.7541086673736572
+
+chkpt: 32 epoch: 20 score: -201 loss: 3673.114013671875 entropy: -3.740238904953003
+
+chkpt: 32 epoch: 21 score: 2042 loss: -3360.93359375 entropy: -3.7865638732910156
+
+chkpt: 32 epoch: 22 score: -2183 loss: 8067.634765625 entropy: -3.7591726779937744
+
+chkpt: 32 epoch: 23 score: 1290 loss: -778.0557861328125 entropy: -3.7852742671966553
+
+chkpt: 32 epoch: 24 score: 549 loss: -3170.86474609375 entropy: -3.827946424484253
+
+chkpt: 32 epoch: 25 score: 775 loss: -643.0711669921875 entropy: -4.331749439239502
+
+chkpt: 32 epoch: 26 score: -724 loss: 743.31982421875 entropy: -3.9505648612976074
+
+chkpt: 32 epoch: 27 score: 2875 loss: -8990.8603515625 entropy: -4.371158123016357
+
+chkpt: 32 epoch: 28 score: -3096 loss: 2270.53662109375 entropy: -5.106686592102051
+
+chkpt: 32 epoch: 29 score: -2833 loss: 10640.92578125 entropy: -4.003541469573975
+
+chkpt: 32 epoch: 30 score: 5360 loss: -9093.0048828125 entropy: -4.306985378265381
+
+chkpt: 32 epoch: 31 score: -3439 loss: 6791.74755859375 entropy: -4.231943607330322
+
+chkpt: 32 epoch: 32 score: -6216 loss: 24682.953125 entropy: -3.6223504543304443
+
+chkpt: 32 epoch: 33 score: 6728 loss: 4272.3203125 entropy: -3.8894829750061035
+
+chkpt: 32 epoch: 34 score: -6323 loss: 23449.427734375 entropy: -3.666323184967041
+
+chkpt: 32 epoch: 35 score: 10674 loss: -12583.607421875 entropy: -4.099069118499756
+
+chkpt: 32 epoch: 36 score: -5628 loss: 5552.423828125 entropy: -3.7537364959716797
+
+chkpt: 32 epoch: 37 score: 2161 loss: 1383.7486572265625 entropy: -3.5425117015838623
+
+chkpt: 32 epoch: 38 score: 228 loss: -2236.199951171875 entropy: -3.7025139331817627
+
+chkpt: 32 epoch: 39 score: -1663 loss: 4554.91064453125 entropy: -3.777052879333496
+
+chkpt: 32 epoch: 40 score: 483 loss: 3930.8603515625 entropy: -3.7793073654174805
+
+chkpt: 32 epoch: 41 score: 574 loss: 3543.988525390625 entropy: -3.8282575607299805
+
+chkpt: 32 epoch: 42 score: -2255 loss: 9005.1875 entropy: -3.6403682231903076
+
+chkpt: 32 epoch: 43 score: 2998 loss: -1041.890625 entropy: -3.320624589920044
+
+chkpt: 32 epoch: 44 score: -73 loss: 3735.2763671875 entropy: -3.7334001064300537
+
+chkpt: 32 epoch: 45 score: -3281 loss: 9345.2607421875 entropy: -3.238659143447876
+
+chkpt: 32 epoch: 46 score: 3946 loss: -1716.1456298828125 entropy: -3.3059895038604736
+
+chkpt: 32 epoch: 47 score: -4112 loss: 8998.2548828125 entropy: -3.361215829849243
+
+chkpt: 32 epoch: 48 score: 3051 loss: 1330.13623046875 entropy: -3.3082265853881836
+
+chkpt: 32 epoch: 49 score: 3338 loss: -16525.826171875 entropy: -3.3662095069885254
+
+chkpt: 32 epoch: 50 score: -5908 loss: 8893.33203125 entropy: -3.4039034843444824
+
+chkpt: 32 epoch: 51 score: 2782 loss: -1375.7742919921875 entropy: -3.5157628059387207
+
+chkpt: 32 epoch: 52 score: 128 loss: -3512.40087890625 entropy: -3.314558744430542
+
+chkpt: 32 epoch: 53 score: -2908 loss: 8215.6259765625 entropy: -3.4458107948303223
+
+chkpt: 32 epoch: 54 score: 5366 loss: -13214.9013671875 entropy: -3.3623580932617188
+
+chkpt: 32 epoch: 55 score: -5326 loss: 9194.1376953125 entropy: -3.540418863296509
+
+chkpt: 32 epoch: 56 score: 5975 loss: -14320.783203125 entropy: -3.572699546813965
+
+chkpt: 32 epoch: 57 score: -5838 loss: 8806.771484375 entropy: -3.5750772953033447
+
+chkpt: 32 epoch: 58 score: 1421 loss: 8205.7138671875 entropy: -3.464891195297241
+
+chkpt: 32 epoch: 59 score: -1473 loss: 8411.16796875 entropy: -3.558291435241699
+
+chkpt: 32 epoch: 60 score: 1375 loss: 2771.4765625 entropy: -3.653127908706665
+
+chkpt: 32 epoch: 61 score: -918 loss: 6657.47216796875 entropy: -3.607940912246704
+
+chkpt: 32 epoch: 62 score: 1104 loss: -3123.61474609375 entropy: -3.381265878677368
+
+chkpt: 32 epoch: 63 score: -3378 loss: 15702.515625 entropy: -3.449965000152588
+
+chkpt: 32 epoch: 64 score: 1834 loss: 7428.2783203125 entropy: -3.503618001937866
+
+chkpt: 32 epoch: 65 score: -5026 loss: 25516.01171875 entropy: -3.3647658824920654
+
+chkpt: 32 epoch: 66 score: 6599 loss: -78.19951629638672 entropy: -3.400374412536621
+
+chkpt: 32 epoch: 67 score: 692 loss: 1008.3349609375 entropy: -3.462015151977539
+
+chkpt: 32 epoch: 68 score: -1344 loss: 2183.356689453125 entropy: -3.548022508621216
+
+chkpt: 32 epoch: 69 score: -663 loss: 5544.57177734375 entropy: -3.570218324661255
+
+chkpt: 32 epoch: 70 score: 42 loss: 5900.53271484375 entropy: -3.5872480869293213
+
+chkpt: 32 epoch: 71 score: -164 loss: 5987.79345703125 entropy: -3.5777339935302734
+
+chkpt: 32 epoch: 72 score: 1082 loss: 3196.530029296875 entropy: -3.6255807876586914
+
+chkpt: 32 epoch: 73 score: 1457 loss: 935.0383911132812 entropy: -3.427689790725708
+
+chkpt: 32 epoch: 74 score: 885 loss: -1559.6175537109375 entropy: -3.7792155742645264
+
+chkpt: 32 epoch: 75 score: -803 loss: 1738.396484375 entropy: -3.738950490951538
+
+chkpt: 32 epoch: 76 score: -1951 loss: 5326.0869140625 entropy: -3.5742852687835693
+
+chkpt: 32 epoch: 77 score: 1016 loss: 1955.8876953125 entropy: -3.3230574131011963
+
+chkpt: 32 epoch: 78 score: -899 loss: 2689.720947265625 entropy: -3.5247154235839844
+
+chkpt: 32 epoch: 79 score: 553 loss: 5541.16796875 entropy: -3.6151888370513916
+
+chkpt: 32 epoch: 80 score: -776 loss: 4911.396484375 entropy: -3.497702121734619
+
+chkpt: 32 epoch: 81 score: -835 loss: 7441.4384765625 entropy: -3.433465003967285
+
+chkpt: 32 epoch: 82 score: -3000 loss: 16506.05859375 entropy: -3.323500633239746
+
+chkpt: 32 epoch: 83 score: 5126 loss: 471.3840637207031 entropy: -3.171746253967285
+
+chkpt: 32 epoch: 84 score: -2634 loss: 8074.36181640625 entropy: -3.3328733444213867
+
+chkpt: 32 epoch: 85 score: 2035 loss: 4251.693359375 entropy: -3.4731600284576416
+
+chkpt: 32 epoch: 86 score: 307 loss: 868.5867309570312 entropy: -3.3899686336517334
+
+chkpt: 32 epoch: 87 score: -2079 loss: 8228.0986328125 entropy: -3.3263189792633057
+
+chkpt: 32 epoch: 88 score: 189 loss: 7567.24755859375 entropy: -3.362600088119507
+
+chkpt: 32 epoch: 89 score: 938 loss: 9038.88671875 entropy: -3.3158469200134277
+
+chkpt: 32 epoch: 90 score: 3887 loss: -3740.356689453125 entropy: -3.7197320461273193
+
+chkpt: 32 epoch: 91 score: -2503 loss: 2251.013427734375 entropy: -3.504477024078369
+
+chkpt: 32 epoch: 92 score: 1057 loss: 259.9959411621094 entropy: -3.54514741897583
+
+chkpt: 32 epoch: 93 score: -339 loss: -30.8302001953125 entropy: -3.4772300720214844
+
+chkpt: 32 epoch: 94 score: 2808 loss: -10736.5693359375 entropy: -3.466557502746582
+
+chkpt: 32 epoch: 95 score: -4691 loss: 4467.34130859375 entropy: -3.3851633071899414
+
+chkpt: 32 epoch: 96 score: 2936 loss: 655.3612060546875 entropy: -3.4721319675445557
+
+chkpt: 32 epoch: 97 score: -4503 loss: 9100.3125 entropy: -3.23044490814209
+
+chkpt: 32 epoch: 98 score: 1486 loss: 2627.5927734375 entropy: -3.3260090351104736
+
+chkpt: 32 epoch: 99 score: -749 loss: 3832.681396484375 entropy: -3.1191868782043457
+
+chkpt: 32 epoch: 100 score: 2314 loss: -684.673583984375 entropy: -2.9834136962890625
+
+chkpt: 32 epoch: 101 score: -2415 loss: 6068.50927734375 entropy: -3.227503776550293
+
+chkpt: 32 epoch: 102 score: 2201 loss: 2569.50244140625 entropy: -3.3928215503692627
+
+chkpt: 32 epoch: 103 score: -3388 loss: 15223.189453125 entropy: -3.1712255477905273
+
+chkpt: 32 epoch: 104 score: 4144 loss: -622.1202392578125 entropy: -3.1840388774871826
+
+chkpt: 32 epoch: 105 score: -512 loss: 287.7928771972656 entropy: -3.021249771118164
+
+chkpt: 32 epoch: 106 score: -3009 loss: 7917.623046875 entropy: -3.272597074508667
+
+chkpt: 32 epoch: 107 score: -833 loss: 7944.39599609375 entropy: -3.100863456726074
+
+chkpt: 32 epoch: 108 score: 1963 loss: 5873.72265625 entropy: -3.310184955596924
+
+chkpt: 32 epoch: 109 score: -1491 loss: 5411.14892578125 entropy: -3.193389892578125
+
+chkpt: 32 epoch: 110 score: 333 loss: 6985.08544921875 entropy: -3.2419540882110596
+
+chkpt: 32 epoch: 111 score: 662 loss: 7502.73095703125 entropy: -3.307642698287964
+
+chkpt: 32 epoch: 112 score: 3600 loss: -13406.83984375 entropy: -2.991825580596924
+
+chkpt: 32 epoch: 113 score: -5537 loss: 6696.42041015625 entropy: -3.0837106704711914
+
+chkpt: 32 epoch: 114 score: 5851 loss: -8810.7431640625 entropy: -3.2263457775115967
+
+chkpt: 32 epoch: 115 score: -7623 loss: 23108.4765625 entropy: -3.2451493740081787
+
+chkpt: 32 epoch: 116 score: 6726 loss: -6861.3544921875 entropy: -3.146998405456543
+
+chkpt: 32 epoch: 117 score: -2400 loss: 561.2060546875 entropy: -3.1785528659820557
+
+chkpt: 32 epoch: 118 score: -3197 loss: 17814.17578125 entropy: -3.1876838207244873
+
+chkpt: 32 epoch: 119 score: 2180 loss: 6305.52783203125 entropy: -3.175396680831909
+
+chkpt: 32 epoch: 120 score: 2595 loss: -3993.79541015625 entropy: -2.6781346797943115
+
+chkpt: 32 epoch: 121 score: -2665 loss: 6371.61572265625 entropy: -3.120903253555298
+
+chkpt: 32 epoch: 122 score: 3542 loss: -306.61248779296875 entropy: -3.2634172439575195
+
+chkpt: 32 epoch: 123 score: -4383 loss: 8245.66796875 entropy: -3.1046268939971924
+
+chkpt: 32 epoch: 124 score: 1058 loss: 7129.6015625 entropy: -3.133100986480713
+
+chkpt: 32 epoch: 125 score: 1916 loss: -52.252349853515625 entropy: -2.870262384414673
+
+chkpt: 32 epoch: 126 score: -2933 loss: 7692.52978515625 entropy: -3.104659080505371
+
+chkpt: 32 epoch: 127 score: -283 loss: 7334.83935546875 entropy: -3.101231575012207
+
+chkpt: 32 epoch: 128 score: 125 loss: 7483.37255859375 entropy: -3.0948758125305176
+
+chkpt: 32 epoch: 129 score: 1432 loss: 1379.22265625 entropy: -3.1678483486175537
+
+chkpt: 32 epoch: 130 score: 1033 loss: 938.933837890625 entropy: -2.9966602325439453
+
+chkpt: 32 epoch: 131 score: 1333 loss: -454.5208435058594 entropy: -3.1179912090301514
+
+chkpt: 32 epoch: 132 score: -3769 loss: 8220.240234375 entropy: -3.105286121368408
+
+chkpt: 32 epoch: 133 score: -571 loss: 7866.5205078125 entropy: -3.1532232761383057
+
+chkpt: 32 epoch: 134 score: 1173 loss: 6369.7841796875 entropy: -3.102720022201538
+
+chkpt: 32 epoch: 135 score: -1360 loss: 7539.9462890625 entropy: -3.148164749145508
+
+chkpt: 32 epoch: 136 score: 2426 loss: 1524.4161376953125 entropy: -3.001098155975342
+
+chkpt: 32 epoch: 137 score: -1439 loss: 1993.8284912109375 entropy: -3.14433217048645
+
+chkpt: 32 epoch: 138 score: 328 loss: 3409.68505859375 entropy: -3.1973204612731934
+
+chkpt: 32 epoch: 139 score: -1536 loss: 8281.779296875 entropy: -3.0907888412475586
+
+chkpt: 32 epoch: 140 score: 1623 loss: 5228.11669921875 entropy: -3.1682214736938477
+
+chkpt: 32 epoch: 141 score: -3161 loss: 11484.9736328125 entropy: -3.017350673675537
+
+chkpt: 32 epoch: 142 score: 6028 loss: -3959.3310546875 entropy: -3.271209955215454
+
+chkpt: 32 epoch: 143 score: -4229 loss: 8266.162109375 entropy: -3.173555850982666
+
+chkpt: 32 epoch: 144 score: 1360 loss: -154.26358032226562 entropy: -3.1744184494018555
+
+chkpt: 32 epoch: 145 score: -1498 loss: 6466.1279296875 entropy: -3.2748916149139404
+
+chkpt: 32 epoch: 146 score: 562 loss: 5056.984375 entropy: -3.2746670246124268
+
+chkpt: 32 epoch: 147 score: 790 loss: 1868.9090576171875 entropy: -3.28914737701416
+
+chkpt: 32 epoch: 148 score: -1296 loss: 7731.97509765625 entropy: -3.2689623832702637
+
+chkpt: 32 epoch: 149 score: 1780 loss: 1508.78857421875 entropy: -3.049119472503662
+
+chkpt: 32 epoch: 150 score: -1499 loss: 5235.3251953125 entropy: -3.2597897052764893
+
+chkpt: 32 epoch: 151 score: 1717 loss: -129.9069366455078 entropy: -3.092843532562256
+
+chkpt: 32 epoch: 152 score: -997 loss: 3950.6357421875 entropy: -3.289306402206421
+
+chkpt: 32 epoch: 153 score: -24 loss: -745.4961547851562 entropy: -3.230278968811035
+
+chkpt: 32 epoch: 154 score: -1457 loss: 6688.02294921875 entropy: -3.278322219848633
+
+chkpt: 32 epoch: 155 score: 3983 loss: -2847.5322265625 entropy: -3.3233420848846436
+
+chkpt: 32 epoch: 156 score: -4112 loss: 9318.2197265625 entropy: -3.1920547485351562
+
+chkpt: 32 epoch: 157 score: 2975 loss: -2107.353271484375 entropy: -2.9007668495178223
+
+chkpt: 32 epoch: 158 score: -3380 loss: 8246.1357421875 entropy: -3.3236186504364014
+
+chkpt: 32 epoch: 159 score: 202 loss: 7744.19970703125 entropy: -3.3775413036346436
+
+chkpt: 32 epoch: 160 score: 1370 loss: 4194.7734375 entropy: -3.4297714233398438
+
+chkpt: 32 epoch: 161 score: 1243 loss: -505.4990234375 entropy: -3.1849567890167236
+
+chkpt: 32 epoch: 162 score: 338 loss: 262.95623779296875 entropy: -3.184112548828125
+
+chkpt: 32 epoch: 163 score: -3295 loss: 10676.8486328125 entropy: -3.2472076416015625
+
+chkpt: 32 epoch: 164 score: 370 loss: 6874.75341796875 entropy: -3.428469657897949
+
+chkpt: 32 epoch: 165 score: 469 loss: 4801.16064453125 entropy: -3.4297568798065186
+
+chkpt: 32 epoch: 166 score: 461 loss: 2887.927001953125 entropy: -3.3651328086853027
+
+chkpt: 32 epoch: 167 score: -1318 loss: 7337.85888671875 entropy: -3.3835806846618652
+
+chkpt: 32 epoch: 168 score: 194 loss: 6846.765625 entropy: -3.401378870010376
+
+chkpt: 32 epoch: 169 score: 540 loss: 4535.68212890625 entropy: -3.4043657779693604
+
+chkpt: 32 epoch: 170 score: 1649 loss: -1438.4288330078125 entropy: -3.152874708175659
+
+chkpt: 32 epoch: 171 score: 15 loss: -2136.7119140625 entropy: -3.2423317432403564
+
+chkpt: 32 epoch: 172 score: -774 loss: 1778.67626953125 entropy: -3.318213939666748
+
+chkpt: 32 epoch: 173 score: -63 loss: 5724.1240234375 entropy: -3.382887363433838
+
+chkpt: 32 epoch: 174 score: -530 loss: 4294.7685546875 entropy: -3.3651480674743652
+
+chkpt: 32 epoch: 175 score: 530 loss: 4187.48974609375 entropy: -3.4109585285186768
+
+chkpt: 32 epoch: 176 score: -2375 loss: 13717.7763671875 entropy: -3.224884271621704
+
+chkpt: 32 epoch: 177 score: 3619 loss: -2336.607421875 entropy: -3.008528232574463
+
+chkpt: 32 epoch: 178 score: -2538 loss: 7013.4609375 entropy: -3.3408615589141846
+
+chkpt: 32 epoch: 179 score: 5520 loss: -12847.32421875 entropy: -3.3672380447387695
+
+chkpt: 32 epoch: 180 score: -5923 loss: 8222.01171875 entropy: -3.3148539066314697
+
+chkpt: 32 epoch: 181 score: -433 loss: 8534.916015625 entropy: -3.2978315353393555
+
+chkpt: 32 epoch: 182 score: 2384 loss: 3199.231689453125 entropy: -3.351454019546509
+
+chkpt: 32 epoch: 183 score: 402 loss: -189.46298217773438 entropy: -3.0969836711883545
+
+chkpt: 32 epoch: 184 score: -415 loss: 5118.12744140625 entropy: -3.3543102741241455
+
+chkpt: 32 epoch: 185 score: -3535 loss: 12308.423828125 entropy: -2.972565174102783
+
+chkpt: 32 epoch: 186 score: 1930 loss: 4944.43359375 entropy: -3.25762939453125
+
+chkpt: 32 epoch: 187 score: 127 loss: 6041.21142578125 entropy: -3.2509915828704834
+
+chkpt: 32 epoch: 188 score: 241 loss: 6895.2724609375 entropy: -3.273921251296997
+
+chkpt: 32 epoch: 189 score: 3174 loss: -2349.5400390625 entropy: -3.3322041034698486
+
+chkpt: 32 epoch: 190 score: -3247 loss: 7210.375 entropy: -3.1626358032226562
+
+chkpt: 32 epoch: 191 score: 242 loss: 8.379929542541504 entropy: -3.0492141246795654
+
+chkpt: 32 epoch: 192 score: -676 loss: 4525.16552734375 entropy: -2.9708192348480225
+
+chkpt: 32 epoch: 193 score: 1048 loss: 5220.0849609375 entropy: -3.248095989227295
+
+chkpt: 32 epoch: 194 score: -913 loss: 5658.56640625 entropy: -3.1990108489990234
+
+chkpt: 32 epoch: 195 score: 96 loss: 7345.013671875 entropy: -3.1193759441375732
+
+chkpt: 32 epoch: 196 score: 3561 loss: -4441.765625 entropy: -3.29712176322937
+
+chkpt: 32 epoch: 197 score: -3712 loss: 5913.76806640625 entropy: -3.182554244995117
+
+chkpt: 32 epoch: 198 score: 411 loss: 2478.595947265625 entropy: -3.172996997833252
+
+chkpt: 32 epoch: 199 score: -1257 loss: 7707.92138671875 entropy: -3.1926004886627197
+
+chkpt: 32 epoch: 200 score: 5079 loss: -7446.95751953125 entropy: -3.161447286605835
+
+chkpt: 32 epoch: 201 score: -5033 loss: 9222.1357421875 entropy: -3.109851837158203
+
+chkpt: 32 epoch: 202 score: 1137 loss: 4815.23046875 entropy: -3.1790664196014404
+
+chkpt: 32 epoch: 203 score: -1435 loss: 7724.7021484375 entropy: -3.1880154609680176
+
+chkpt: 32 epoch: 204 score: 88 loss: 5911.03955078125 entropy: -3.2589664459228516
+
+chkpt: 32 epoch: 205 score: 2340 loss: -1119.8023681640625 entropy: -3.030796766281128
+
+chkpt: 32 epoch: 206 score: 659 loss: -886.6905517578125 entropy: -3.0637564659118652
+
+chkpt: 32 epoch: 207 score: -3670 loss: 9002.5966796875 entropy: -3.0005877017974854
+
+chkpt: 32 epoch: 208 score: 3982 loss: -2369.697265625 entropy: -2.96060848236084
+
+chkpt: 32 epoch: 209 score: -470 loss: -611.5548706054688 entropy: -3.0043909549713135
+
+chkpt: 32 epoch: 210 score: -277 loss: 2293.059326171875 entropy: -3.2083382606506348
+
+chkpt: 32 epoch: 211 score: 2857 loss: -9251.138671875 entropy: -3.1432361602783203
+
+chkpt: 32 epoch: 212 score: -5980 loss: 15427.0068359375 entropy: -3.064307689666748
+
+chkpt: 32 epoch: 213 score: 3328 loss: -137.2168426513672 entropy: -3.249575138092041
+
+chkpt: 32 epoch: 214 score: -3312 loss: 7815.86474609375 entropy: -3.1311333179473877
+
+chkpt: 32 epoch: 215 score: 394 loss: 7296.77783203125 entropy: -3.1724627017974854
+
+chkpt: 32 epoch: 216 score: 884 loss: 6055.79345703125 entropy: -3.2192001342773438
+
+chkpt: 32 epoch: 217 score: 3029 loss: 499.5284423828125 entropy: -3.3566741943359375
+
+chkpt: 32 epoch: 218 score: -893 loss: -606.8367919921875 entropy: -3.0491104125976562
+
+chkpt: 32 epoch: 219 score: -2057 loss: 5333.4189453125 entropy: -3.2651402950286865
+
+chkpt: 32 epoch: 220 score: 1824 loss: -3379.517822265625 entropy: -3.043959617614746
+
+chkpt: 32 epoch: 221 score: 967 loss: -8421.3408203125 entropy: -3.1523754596710205
+
+chkpt: 32 epoch: 222 score: -256 loss: -152.728515625 entropy: -3.3936967849731445
+
+chkpt: 32 epoch: 223 score: -3651 loss: 7632.54150390625 entropy: -3.1919162273406982
+
+chkpt: 32 epoch: 224 score: 2219 loss: 2512.261962890625 entropy: -3.352155923843384
+
+chkpt: 32 epoch: 225 score: -62 loss: -3511.584716796875 entropy: -3.2260234355926514
+
+chkpt: 32 epoch: 226 score: 890 loss: -1205.52734375 entropy: -2.975860595703125
+
+chkpt: 32 epoch: 227 score: 1153 loss: -6767.88671875 entropy: -3.4243111610412598
+
+chkpt: 32 epoch: 228 score: -3970 loss: 8480.96484375 entropy: -3.2132692337036133
+
+chkpt: 32 epoch: 229 score: -489 loss: 7304.3916015625 entropy: -3.267536163330078
+
+chkpt: 32 epoch: 230 score: 4863 loss: -4725.43359375 entropy: -3.551767349243164
+
+chkpt: 32 epoch: 231 score: -3174 loss: 3917.320556640625 entropy: -3.4788177013397217
+
+chkpt: 32 epoch: 232 score: -4122 loss: 17565.8984375 entropy: -3.391843557357788
+
+chkpt: 32 epoch: 233 score: 4257 loss: 3651.908447265625 entropy: -3.468242883682251
+
+chkpt: 32 epoch: 234 score: -1502 loss: 6646.73681640625 entropy: -3.397059202194214
+
+chkpt: 32 epoch: 235 score: 121 loss: 6672.66650390625 entropy: -3.38712215423584
+
+chkpt: 32 epoch: 236 score: 1655 loss: 3351.33251953125 entropy: -3.345165729522705
+
+chkpt: 32 epoch: 237 score: 1663 loss: -259.38348388671875 entropy: -3.602691173553467
+
+chkpt: 32 epoch: 238 score: -321 loss: -19.794689178466797 entropy: -3.2140400409698486
+
+chkpt: 32 epoch: 239 score: -2367 loss: 4992.18798828125 entropy: -3.4848709106445312
+
+chkpt: 32 epoch: 240 score: 287 loss: 3283.732177734375 entropy: -3.520024299621582
+
+chkpt: 32 epoch: 241 score: -351 loss: 4822.92138671875 entropy: -3.4913828372955322
+
+chkpt: 32 epoch: 242 score: 2104 loss: -2668.489990234375 entropy: -3.5905473232269287
+
+chkpt: 32 epoch: 243 score: -4738 loss: 15327.3388671875 entropy: -3.426236629486084
+
+chkpt: 32 epoch: 244 score: 2878 loss: 2213.604248046875 entropy: -3.6018190383911133
+
+chkpt: 32 epoch: 245 score: 1920 loss: -980.8438110351562 entropy: -3.460073947906494
+
+chkpt: 32 epoch: 246 score: 1618 loss: -5989.2373046875 entropy: -3.901496410369873
+
+chkpt: 32 epoch: 247 score: -3314 loss: 2780.04541015625 entropy: -3.7355475425720215
+
+chkpt: 32 epoch: 248 score: -782 loss: 3918.948974609375 entropy: -3.7282073497772217
+
+chkpt: 32 epoch: 249 score: 843 loss: 1326.8228759765625 entropy: -3.7754058837890625
+
+chkpt: 32 epoch: 250 score: -1494 loss: 7069.0986328125 entropy: -3.7593116760253906
+
+chkpt: 32 epoch: 251 score: 1182 loss: 623.6240234375 entropy: -3.900336265563965
+
+chkpt: 32 epoch: 252 score: 4771 loss: -16334.8271484375 entropy: -5.961644649505615
+
+chkpt: 32 epoch: 253 score: -2326 loss: -270.8548583984375 entropy: -5.762007713317871
+
+chkpt: 32 epoch: 254 score: 85 loss: -2945.557373046875 entropy: -5.419711589813232
+
+chkpt: 32 epoch: 255 score: -1426 loss: 2299.289794921875 entropy: -4.035045623779297
+
+chkpt: 32 epoch: 256 score: -884 loss: 1883.2095947265625 entropy: -3.896968364715576
+
+chkpt: 32 epoch: 257 score: -2294 loss: 13320.3564453125 entropy: -3.867266893386841
+
+chkpt: 32 epoch: 258 score: 4527 loss: -3230.86962890625 entropy: -4.125997066497803
+
+chkpt: 32 epoch: 259 score: -1312 loss: 3321.716064453125 entropy: -4.1061906814575195
+
+chkpt: 32 epoch: 260 score: 2353 loss: -9233.0107421875 entropy: -3.677114486694336
+
+chkpt: 32 epoch: 261 score: -3818 loss: 5797.1630859375 entropy: -3.7529256343841553
+
+chkpt: 32 epoch: 262 score: 2283 loss: -111.55863189697266 entropy: -3.76586651802063
+
+chkpt: 32 epoch: 263 score: -1201 loss: 4907.55908203125 entropy: -3.7402355670928955
+
+chkpt: 32 epoch: 264 score: 2625 loss: -5989.109375 entropy: -3.9818530082702637
+
+chkpt: 32 epoch: 265 score: -4181 loss: 7292.89453125 entropy: -3.6844241619110107
+
+chkpt: 32 epoch: 266 score: 1153 loss: 3250.673095703125 entropy: -3.954256534576416
+
+chkpt: 32 epoch: 267 score: 2505 loss: -456.57135009765625 entropy: -4.950295925140381
+
+chkpt: 32 epoch: 268 score: 773 loss: -4026.342529296875 entropy: -5.507076263427734
+
+chkpt: 32 epoch: 269 score: -1446 loss: -571.5458984375 entropy: -3.649991750717163
+
+chkpt: 32 epoch: 270 score: 339 loss: -3519.03759765625 entropy: -3.7668445110321045
+
+chkpt: 32 epoch: 271 score: -3253 loss: 7796.45361328125 entropy: -3.801176071166992
+
+chkpt: 32 epoch: 272 score: 1057 loss: 4368.34765625 entropy: -3.6041345596313477
+
+chkpt: 32 epoch: 273 score: 3107 loss: -63.912723541259766 entropy: -6.965144634246826
+
+chkpt: 32 epoch: 274 score: -1973 loss: 2349.30859375 entropy: -3.4393277168273926
+
+chkpt: 32 epoch: 275 score: -2590 loss: 8601.1025390625 entropy: -3.773660898208618
+
+chkpt: 32 epoch: 276 score: 1172 loss: 3177.296875 entropy: -3.979863166809082
+
+chkpt: 32 epoch: 277 score: 5047 loss: -14762.0654296875 entropy: -5.621517658233643
+
+chkpt: 32 epoch: 278 score: -2285 loss: -7508.8642578125 entropy: -3.608309745788574
+
+chkpt: 32 epoch: 279 score: -2763 loss: 4849.49267578125 entropy: -3.7748212814331055
+
+chkpt: 32 epoch: 280 score: -164 loss: 5657.36083984375 entropy: -3.8889052867889404
+
+chkpt: 32 epoch: 281 score: 5341 loss: -13947.69140625 entropy: -4.7912983894348145
+
+chkpt: 32 epoch: 282 score: -1808 loss: 461.728271484375 entropy: -4.801821231842041
+
+chkpt: 32 epoch: 283 score: -4351 loss: 6380.35693359375 entropy: -3.4354429244995117
+
+chkpt: 32 epoch: 284 score: 2962 loss: -1291.14306640625 entropy: -3.165895462036133
+
+chkpt: 32 epoch: 285 score: -3370 loss: 8718.4990234375 entropy: -3.2525532245635986
+
+chkpt: 32 epoch: 286 score: -1938 loss: 15558.5185546875 entropy: -3.244511842727661
+
+chkpt: 32 epoch: 287 score: 2336 loss: 7950.9775390625 entropy: -3.3538668155670166
+
+chkpt: 32 epoch: 288 score: 6096 loss: -10495.650390625 entropy: -3.497633934020996
+
+chkpt: 32 epoch: 289 score: 365 loss: -9288.8359375 entropy: -3.572598457336426
+
+chkpt: 32 epoch: 290 score: -3009 loss: 870.010498046875 entropy: -3.1187236309051514
+
+chkpt: 32 epoch: 291 score: -3341 loss: 9693.5849609375 entropy: -3.274143695831299
+
+chkpt: 32 epoch: 292 score: -158 loss: 10500.46484375 entropy: -3.336686611175537
+
+chkpt: 32 epoch: 293 score: 2613 loss: 2318.8203125 entropy: -3.1810877323150635
+
+chkpt: 32 epoch: 294 score: -1670 loss: 6529.61376953125 entropy: -3.30703067779541
+
+chkpt: 32 epoch: 295 score: 1664 loss: 1998.7105712890625 entropy: -3.337635040283203
+
+chkpt: 32 epoch: 296 score: -4078 loss: 6959.02685546875 entropy: -3.079710006713867
+
+chkpt: 32 epoch: 297 score: 1884 loss: 7439.47412109375 entropy: -3.2789273262023926
+
+chkpt: 32 epoch: 298 score: 1483 loss: 3615.3173828125 entropy: -3.2735402584075928
+
+chkpt: 32 epoch: 299 score: -3222 loss: 7437.71533203125 entropy: -3.0823633670806885
+
+chkpt: 32 epoch: 300 score: 1584 loss: 7311.81298828125 entropy: -3.2406182289123535
+
+chkpt: 32 epoch: 301 score: 1550 loss: -1594.13232421875 entropy: -3.079786777496338
+
+chkpt: 32 epoch: 302 score: 1441 loss: -1363.8128662109375 entropy: -2.877288341522217
+
+chkpt: 32 epoch: 303 score: -3502 loss: 7326.9951171875 entropy: -3.2257895469665527
+
+chkpt: 32 epoch: 304 score: 1050 loss: 5109.15771484375 entropy: -3.2720446586608887
+
+chkpt: 32 epoch: 305 score: 418 loss: 6728.09130859375 entropy: -3.169471263885498
+
+chkpt: 32 epoch: 306 score: 481 loss: 5598.66259765625 entropy: -3.218935489654541
+
+chkpt: 32 epoch: 307 score: 4338 loss: -8223.150390625 entropy: -3.394625663757324
+
+chkpt: 32 epoch: 308 score: -3846 loss: -1332.3046875 entropy: -3.2323226928710938
+
+chkpt: 32 epoch: 309 score: -1510 loss: 7813.73779296875 entropy: -3.3434696197509766
+
+chkpt: 32 epoch: 310 score: 5826 loss: -15666.95703125 entropy: -3.2377240657806396
+
+chkpt: 32 epoch: 311 score: -4461 loss: 4552.9140625 entropy: -3.3193745613098145
+
+chkpt: 32 epoch: 312 score: -930 loss: 2028.8223876953125 entropy: -3.2420945167541504
+
+chkpt: 32 epoch: 313 score: 170 loss: 4372.6640625 entropy: -3.3796942234039307
+
+chkpt: 32 epoch: 314 score: -139 loss: 4997.47900390625 entropy: -3.3983848094940186
+
+chkpt: 32 epoch: 315 score: 2481 loss: -1315.6563720703125 entropy: -3.09770131111145
+
+chkpt: 32 epoch: 316 score: -1549 loss: 1193.563720703125 entropy: -3.248797655105591
+
+chkpt: 32 epoch: 317 score: 4379 loss: -10188.7353515625 entropy: -3.5350162982940674
+
+chkpt: 32 epoch: 318 score: 233 loss: -12200.69921875 entropy: -3.423619508743286
+
+chkpt: 32 epoch: 319 score: -4709 loss: 4983.19482421875 entropy: -3.3492891788482666
+
+chkpt: 32 epoch: 320 score: -587 loss: 3842.14501953125 entropy: -3.3321590423583984
+
+chkpt: 32 epoch: 321 score: 1930 loss: 22.30298614501953 entropy: -3.0779500007629395
+
+chkpt: 32 epoch: 322 score: 122 loss: -402.3378601074219 entropy: -3.1122803688049316
+
+chkpt: 32 epoch: 323 score: -1517 loss: -1884.147705078125 entropy: -3.081697463989258
+
+chkpt: 32 epoch: 324 score: 1390 loss: -1137.336181640625 entropy: -2.9667904376983643
+
+chkpt: 32 epoch: 325 score: -3702 loss: 8004.86474609375 entropy: -3.1639552116394043
+
+chkpt: 32 epoch: 326 score: 1952 loss: 3878.65185546875 entropy: -3.272907018661499
+
+chkpt: 32 epoch: 327 score: -1141 loss: 8773.5927734375 entropy: -3.2407639026641846
+
+chkpt: 32 epoch: 328 score: 1842 loss: 4453.60498046875 entropy: -3.259361982345581
+
+chkpt: 32 epoch: 329 score: -955 loss: 6306.26708984375 entropy: -3.1807780265808105
+
+chkpt: 32 epoch: 330 score: 1890 loss: -1717.4619140625 entropy: -2.920401096343994
+
+chkpt: 32 epoch: 331 score: 3071 loss: -10989.8837890625 entropy: -3.2217066287994385
+
+chkpt: 32 epoch: 332 score: -1665 loss: -588.6983032226562 entropy: -3.232614517211914
+
+chkpt: 32 epoch: 333 score: -1575 loss: 1758.126708984375 entropy: -3.1537106037139893
+
+chkpt: 32 epoch: 334 score: -3705 loss: 8323.998046875 entropy: -3.042912006378174
+
+chkpt: 32 epoch: 335 score: -1314 loss: 8277.0068359375 entropy: -3.014934778213501
+
+chkpt: 32 epoch: 336 score: 3614 loss: 2600.855712890625 entropy: -3.1752119064331055
+
+chkpt: 32 epoch: 337 score: -83 loss: 4176.9296875 entropy: -3.187934160232544
+
+chkpt: 32 epoch: 338 score: -1262 loss: 8332.1669921875 entropy: -3.1982851028442383
+
+chkpt: 32 epoch: 339 score: 1638 loss: 3141.9306640625 entropy: -3.190244197845459
+
+chkpt: 32 epoch: 340 score: -1628 loss: 8278.3681640625 entropy: -3.1500306129455566
+
+chkpt: 32 epoch: 341 score: 1355 loss: 1798.357666015625 entropy: -2.936767816543579
+
+chkpt: 32 epoch: 342 score: 4473 loss: -14417.65234375 entropy: -3.127119302749634
+
+chkpt: 32 epoch: 343 score: -5606 loss: 9929.474609375 entropy: -3.1474685668945312
+
+chkpt: 32 epoch: 344 score: 2538 loss: -2138.44970703125 entropy: -2.8644325733184814
+
+chkpt: 32 epoch: 345 score: -2673 loss: 6928.56640625 entropy: -3.1516010761260986
+
+chkpt: 32 epoch: 346 score: -454 loss: 7865.8798828125 entropy: -3.1061997413635254
+
+chkpt: 32 epoch: 347 score: 158 loss: 5397.17529296875 entropy: -3.193859100341797
+
+chkpt: 32 epoch: 348 score: -173 loss: 8055.01025390625 entropy: -3.1705315113067627
+
+chkpt: 32 epoch: 349 score: 2425 loss: 800.0775756835938 entropy: -3.1096737384796143
+
+chkpt: 32 epoch: 350 score: 2 loss: 420.7297668457031 entropy: -3.0862457752227783
+
+chkpt: 32 epoch: 351 score: -1905 loss: 6502.16552734375 entropy: -3.24630069732666
+
+chkpt: 32 epoch: 352 score: -660 loss: 7727.47265625 entropy: -3.2631747722625732
+
+chkpt: 32 epoch: 353 score: 5964 loss: -12040.330078125 entropy: -3.2256126403808594
+
+chkpt: 32 epoch: 354 score: -2957 loss: 1062.6636962890625 entropy: -3.0990283489227295
+
+chkpt: 32 epoch: 355 score: -4031 loss: 16329.9658203125 entropy: -3.210196018218994
+
+chkpt: 32 epoch: 356 score: 2835 loss: 3238.104736328125 entropy: -3.1002554893493652
+
+chkpt: 32 epoch: 357 score: -1769 loss: 6542.15869140625 entropy: -3.271458387374878
+
+chkpt: 32 epoch: 358 score: 2817 loss: 837.597900390625 entropy: -3.0795507431030273
+
+chkpt: 32 epoch: 359 score: -3016 loss: 8150.431640625 entropy: -3.2763044834136963
+
+chkpt: 32 epoch: 360 score: 2807 loss: -2071.141357421875 entropy: -2.942440986633301
+
+chkpt: 32 epoch: 361 score: 1564 loss: -5759.4990234375 entropy: -3.1679136753082275
+
+chkpt: 32 epoch: 362 score: -1669 loss: 4188.197265625 entropy: -3.137021541595459
+
+chkpt: 32 epoch: 363 score: -304 loss: -270.39337158203125 entropy: -2.978640556335449
+
+chkpt: 32 epoch: 364 score: -1642 loss: 7298.150390625 entropy: -3.266296863555908
+
+chkpt: 32 epoch: 365 score: 1129 loss: -1891.279296875 entropy: -3.00300931930542
+
+chkpt: 32 epoch: 366 score: 816 loss: -4570.58837890625 entropy: -2.9883506298065186
+
+chkpt: 32 epoch: 367 score: 87 loss: -4091.1201171875 entropy: -3.187493324279785
+
+chkpt: 32 epoch: 368 score: -2171 loss: 4464.08056640625 entropy: -3.0947091579437256
+
+chkpt: 32 epoch: 369 score: 1601 loss: 3610.82421875 entropy: -3.3524434566497803
+
+chkpt: 32 epoch: 370 score: -1573 loss: 2238.034423828125 entropy: -3.353532552719116
+
+chkpt: 32 epoch: 371 score: -1376 loss: 8567.267578125 entropy: -3.449885606765747
+
+chkpt: 32 epoch: 372 score: 4501 loss: -8126.40869140625 entropy: -3.2777798175811768
+
+chkpt: 32 epoch: 373 score: -3130 loss: 6075.30712890625 entropy: -3.4031970500946045
+
+chkpt: 32 epoch: 374 score: -354 loss: 6721.498046875 entropy: -3.4877758026123047
+
+chkpt: 32 epoch: 375 score: -587 loss: 5169.0146484375 entropy: -3.428284168243408
+
+chkpt: 32 epoch: 376 score: 421 loss: 5439.99365234375 entropy: -3.492861270904541
+
+chkpt: 32 epoch: 377 score: -839 loss: 8347.4423828125 entropy: -3.5204567909240723
+
+chkpt: 32 epoch: 378 score: 1510 loss: 2240.351318359375 entropy: -3.4795994758605957
+
+chkpt: 32 epoch: 379 score: -283 loss: 100.3348388671875 entropy: -3.3756320476531982
+
+chkpt: 32 epoch: 380 score: 2993 loss: -8994.3857421875 entropy: -3.21865177154541
+
+chkpt: 32 epoch: 381 score: -4387 loss: 9052.2646484375 entropy: -3.495471715927124
+
+chkpt: 32 epoch: 382 score: 1227 loss: 1625.2620849609375 entropy: -3.31143856048584
+
+chkpt: 32 epoch: 383 score: 463 loss: 7045.98388671875 entropy: -3.4263079166412354
+
+chkpt: 32 epoch: 384 score: -32 loss: 6285.82763671875 entropy: -3.335758924484253
+
+chkpt: 32 epoch: 385 score: 1381 loss: 4317.10986328125 entropy: -3.343404769897461
+
+chkpt: 32 epoch: 386 score: 395 loss: -2548.896728515625 entropy: -2.7210123538970947
+
+chkpt: 32 epoch: 387 score: -29 loss: 182.7738800048828 entropy: -3.037705183029175
+
+chkpt: 32 epoch: 388 score: -2978 loss: 5231.37353515625 entropy: -3.3169071674346924
+
+chkpt: 32 epoch: 389 score: 1262 loss: 2352.0751953125 entropy: -3.1238534450531006
+
+chkpt: 32 epoch: 390 score: -2528 loss: 8061.96875 entropy: -3.245048999786377
+
+chkpt: 32 epoch: 391 score: 5758 loss: -9840.59765625 entropy: -3.186701536178589
+
+chkpt: 32 epoch: 392 score: -6168 loss: 6078.390625 entropy: -3.124598979949951
+
+chkpt: 32 epoch: 393 score: 2076 loss: 3009.416015625 entropy: -3.237212896347046
+
+chkpt: 32 epoch: 394 score: -488 loss: 3244.265380859375 entropy: -3.219703435897827
+
+chkpt: 32 epoch: 395 score: 498 loss: 7520.060546875 entropy: -3.246612310409546
+
+chkpt: 32 epoch: 396 score: 1721 loss: 2874.603515625 entropy: -3.2411575317382812
+
+chkpt: 32 epoch: 397 score: -2080 loss: 8022.673828125 entropy: -3.284701108932495
+
+chkpt: 32 epoch: 398 score: 2891 loss: -309.9886779785156 entropy: -3.235473871231079
+
+chkpt: 32 epoch: 399 score: -1118 loss: 5814.48095703125 entropy: -3.1998848915100098
+
+chkpt: 32 epoch: 400 score: -1006 loss: 1749.674560546875 entropy: -3.095611095428467
+
+chkpt: 32 epoch: 401 score: 103 loss: 2402.22216796875 entropy: -3.2275991439819336
+
+chkpt: 32 epoch: 402 score: 1702 loss: -3875.64697265625 entropy: -2.7577061653137207
+
+chkpt: 32 epoch: 403 score: -3554 loss: 9111.6875 entropy: -3.2574117183685303
+
+chkpt: 32 epoch: 404 score: 406 loss: 7231.2490234375 entropy: -3.2752492427825928
+
+chkpt: 32 epoch: 405 score: 3989 loss: -2684.056884765625 entropy: -3.1727826595306396
+
+chkpt: 32 epoch: 406 score: -6285 loss: 12477.6259765625 entropy: -3.011610269546509
+
+chkpt: 32 epoch: 407 score: 1802 loss: 7669.3671875 entropy: -3.2443344593048096
+
+chkpt: 32 epoch: 408 score: 727 loss: 7040.33740234375 entropy: -3.253994941711426
+
+chkpt: 32 epoch: 409 score: 3016 loss: 73.66264343261719 entropy: -3.143725872039795
+
+chkpt: 32 epoch: 410 score: -2106 loss: 1737.147216796875 entropy: -3.245346784591675
+
+chkpt: 32 epoch: 411 score: -1192 loss: 6571.62353515625 entropy: -3.261847734451294
+
+chkpt: 32 epoch: 412 score: 941 loss: 1697.001708984375 entropy: -3.2255818843841553
+
+chkpt: 32 epoch: 413 score: 23 loss: 3407.143310546875 entropy: -3.137172222137451
+
+chkpt: 32 epoch: 414 score: -1581 loss: 7297.4794921875 entropy: -3.247082471847534
+
+chkpt: 32 epoch: 415 score: 2371 loss: -7440.89599609375 entropy: -2.939363479614258
+
+chkpt: 32 epoch: 416 score: -1266 loss: 4309.3046875 entropy: -3.2524218559265137
+
+chkpt: 32 epoch: 417 score: -1347 loss: 10659.99609375 entropy: -3.198359489440918
+
+chkpt: 32 epoch: 418 score: 3160 loss: -2688.28466796875 entropy: -2.8209638595581055
+
+chkpt: 32 epoch: 419 score: -2204 loss: 4949.875 entropy: -3.208031177520752
+
+chkpt: 32 epoch: 420 score: 1377 loss: 3739.603759765625 entropy: -3.2022130489349365
+
+chkpt: 32 epoch: 421 score: 743 loss: -4574.2607421875 entropy: -3.0696663856506348
+
+chkpt: 32 epoch: 422 score: -2588 loss: 4899.72802734375 entropy: -3.2104926109313965
+
+chkpt: 32 epoch: 423 score: -2898 loss: 18133.279296875 entropy: -3.1728410720825195
+
+chkpt: 32 epoch: 424 score: 2360 loss: 7876.67626953125 entropy: -3.045041799545288
+
+chkpt: 32 epoch: 425 score: 350 loss: 7234.03857421875 entropy: -3.2236311435699463
+
+chkpt: 32 epoch: 426 score: 2772 loss: -2711.896728515625 entropy: -3.1697537899017334
+
+chkpt: 32 epoch: 427 score: -2875 loss: 7892.74951171875 entropy: -3.201995611190796
+
+chkpt: 32 epoch: 428 score: 1174 loss: 4448.46923828125 entropy: -3.176356554031372
+
+chkpt: 32 epoch: 429 score: -319 loss: 1632.5941162109375 entropy: -3.1571993827819824
+
+chkpt: 32 epoch: 430 score: 420 loss: -748.0803833007812 entropy: -3.123542308807373
+
+chkpt: 32 epoch: 431 score: -2047 loss: 3697.99169921875 entropy: -2.992982864379883
+
+chkpt: 32 epoch: 432 score: 2062 loss: 1402.7681884765625 entropy: -3.118999481201172
+
+chkpt: 32 epoch: 433 score: -739 loss: 5544.91162109375 entropy: -3.1619515419006348
+
+chkpt: 32 epoch: 434 score: 2304 loss: -5541.57568359375 entropy: -2.7326645851135254
+
+chkpt: 32 epoch: 435 score: -686 loss: -231.2470245361328 entropy: -2.7715792655944824
+
+chkpt: 32 epoch: 436 score: -155 loss: 4624.4599609375 entropy: -3.125623941421509
+
+chkpt: 32 epoch: 437 score: -2183 loss: 7481.31591796875 entropy: -3.0971949100494385
+
+chkpt: 32 epoch: 438 score: -608 loss: 8832.4794921875 entropy: -3.092597484588623
+
+chkpt: 32 epoch: 439 score: 6076 loss: -5041.7421875 entropy: -3.0448966026306152
+
+chkpt: 32 epoch: 440 score: -6124 loss: 8734.3642578125 entropy: -3.0599071979522705
+
+chkpt: 32 epoch: 441 score: 1343 loss: 5962.79736328125 entropy: -2.912198305130005
+
+chkpt: 32 epoch: 442 score: -1386 loss: 7764.5380859375 entropy: -3.064305543899536
+
+chkpt: 32 epoch: 443 score: -35 loss: 8850.439453125 entropy: -2.975069999694824
+
+chkpt: 32 epoch: 444 score: 848 loss: 6172.240234375 entropy: -3.0814626216888428
+
+chkpt: 32 epoch: 445 score: 3301 loss: -2523.960693359375 entropy: -3.0377838611602783
+
+chkpt: 32 epoch: 446 score: -4073 loss: 7321.98681640625 entropy: -3.0586018562316895
+
+chkpt: 32 epoch: 447 score: 1596 loss: 1447.0325927734375 entropy: -2.963304281234741
+
+chkpt: 32 epoch: 448 score: -556 loss: 3915.8984375 entropy: -3.0747499465942383
+
+chkpt: 32 epoch: 449 score: 1784 loss: -1078.61865234375 entropy: -2.7000632286071777
+
+chkpt: 32 epoch: 450 score: -2655 loss: 8405.236328125 entropy: -2.9175312519073486
+
+chkpt: 32 epoch: 451 score: -303 loss: 7118.0390625 entropy: -3.104886293411255
+
+chkpt: 32 epoch: 452 score: -176 loss: 8170.853515625 entropy: -3.0909876823425293
+
+chkpt: 32 epoch: 453 score: 5836 loss: -10983.8564453125 entropy: -2.9690988063812256
+
+chkpt: 32 epoch: 454 score: -3120 loss: 167.3883819580078 entropy: -2.989481210708618
+
+chkpt: 32 epoch: 455 score: -1774 loss: 5849.52783203125 entropy: -3.084080219268799
+
+chkpt: 32 epoch: 456 score: -169 loss: 5026.8515625 entropy: -3.0829648971557617
+
+chkpt: 32 epoch: 457 score: -78 loss: 6170.56591796875 entropy: -3.131378650665283
+
+chkpt: 32 epoch: 458 score: 460 loss: 4011.685546875 entropy: -2.9762141704559326
+
+chkpt: 32 epoch: 459 score: 2112 loss: -2628.676513671875 entropy: -2.5723185539245605
+
+chkpt: 32 epoch: 460 score: -6548 loss: 18871.71875 entropy: -3.079200267791748
+
+chkpt: 32 epoch: 461 score: 4279 loss: 1538.756103515625 entropy: -3.0732693672180176
+
+chkpt: 32 epoch: 462 score: -468 loss: 3018.9541015625 entropy: -3.091813325881958
+
+chkpt: 32 epoch: 463 score: 585 loss: 1399.609619140625 entropy: -2.870596408843994
+
+chkpt: 32 epoch: 464 score: -1660 loss: 7684.60986328125 entropy: -3.148646831512451
+
+chkpt: 32 epoch: 465 score: 2890 loss: 425.94769287109375 entropy: -3.1272900104522705
+
+chkpt: 32 epoch: 466 score: 1029 loss: -3023.21435546875 entropy: -2.331782579421997
+
+chkpt: 32 epoch: 467 score: -2225 loss: 3316.8193359375 entropy: -3.12024188041687
+
+chkpt: 32 epoch: 468 score: -601 loss: 4662.1669921875 entropy: -3.151069402694702
+
+chkpt: 32 epoch: 469 score: -1267 loss: 9162.73046875 entropy: -3.2371985912323
+
+chkpt: 32 epoch: 470 score: 2560 loss: -3321.646484375 entropy: -2.8909454345703125
+
+chkpt: 32 epoch: 471 score: -2340 loss: 7562.734375 entropy: -3.1058247089385986
+
+chkpt: 32 epoch: 472 score: 2960 loss: -6435.41357421875 entropy: -2.872957229614258
+
+chkpt: 32 epoch: 473 score: 563 loss: -7322.06640625 entropy: -2.6904120445251465
+
+chkpt: 32 epoch: 474 score: -2916 loss: 5954.88916015625 entropy: -3.111980676651001
+
+chkpt: 32 epoch: 475 score: -344 loss: 6311.625 entropy: -3.148592472076416
+
+chkpt: 32 epoch: 476 score: -172 loss: 4819.08154296875 entropy: -3.1024956703186035
+
+chkpt: 32 epoch: 477 score: -1212 loss: 5996.13427734375 entropy: -2.980731248855591
+
+chkpt: 32 epoch: 478 score: 543 loss: 8054.44091796875 entropy: -3.1621532440185547
+
+chkpt: 32 epoch: 479 score: 668 loss: 4413.13330078125 entropy: -3.0740818977355957
+
+chkpt: 32 epoch: 480 score: 2437 loss: -2203.468994140625 entropy: -2.437683343887329
+
+chkpt: 32 epoch: 481 score: 460 loss: -5697.9658203125 entropy: -2.766350746154785
+
+chkpt: 32 epoch: 482 score: -2124 loss: 3497.23583984375 entropy: -3.0396463871002197
+
+chkpt: 32 epoch: 483 score: -1746 loss: 6927.916015625 entropy: -3.0297157764434814
+
+chkpt: 32 epoch: 484 score: 3068 loss: 2005.8189697265625 entropy: -3.03503680229187
+
+chkpt: 32 epoch: 485 score: -1679 loss: 4669.04443359375 entropy: -3.0317087173461914
+
+chkpt: 32 epoch: 486 score: -954 loss: 5483.2099609375 entropy: -3.0352227687835693
+
+chkpt: 32 epoch: 487 score: -711 loss: 7824.98095703125 entropy: -3.0357131958007812
+
+chkpt: 32 epoch: 488 score: 1797 loss: 4630.1689453125 entropy: -2.917011260986328
+
+chkpt: 32 epoch: 489 score: -82 loss: 1479.351318359375 entropy: -3.0205509662628174
+
+chkpt: 32 epoch: 490 score: -847 loss: 2087.51513671875 entropy: -2.7951207160949707
+
+chkpt: 32 epoch: 491 score: 713 loss: 2447.312744140625 entropy: -2.912574529647827
+
+chkpt: 32 epoch: 492 score: -696 loss: 7306.64501953125 entropy: -3.020230531692505
+
+chkpt: 32 epoch: 493 score: -1465 loss: 7714.43505859375 entropy: -2.8171064853668213
+
+chkpt: 32 epoch: 494 score: 5383 loss: -4273.69775390625 entropy: -3.02435302734375
+
+chkpt: 32 epoch: 495 score: -4509 loss: 6398.5771484375 entropy: -2.940002918243408
+
+chkpt: 32 epoch: 496 score: -660 loss: 8119.78955078125 entropy: -2.878692626953125
+
+chkpt: 32 epoch: 497 score: 3066 loss: -3426.99609375 entropy: -2.5872445106506348
+
+chkpt: 32 epoch: 498 score: -3492 loss: 7965.35693359375 entropy: -2.8504037857055664
+
+chkpt: 32 epoch: 499 score: 1652 loss: 2537.3544921875 entropy: -2.949138641357422
+
+chkpt: 32 epoch: 500 score: -116 loss: 4065.371337890625 entropy: -2.670854091644287
+
+chkpt: 32 epoch: 501 score: 993 loss: -2455.597900390625 entropy: -2.6360578536987305
+
+chkpt: 32 epoch: 502 score: -2599 loss: 7542.37744140625 entropy: -2.885866641998291
+
+chkpt: 32 epoch: 503 score: 6107 loss: -11782.3310546875 entropy: -2.9682159423828125
+
+chkpt: 32 epoch: 504 score: -5907 loss: 9053.4033203125 entropy: -2.7697408199310303
+
+chkpt: 32 epoch: 505 score: 1275 loss: 3853.7138671875 entropy: -2.8721110820770264
+
+chkpt: 32 epoch: 506 score: -1562 loss: 7763.59326171875 entropy: -2.7958645820617676
+
+chkpt: 32 epoch: 507 score: 579 loss: 4867.70068359375 entropy: -2.927760362625122
+
+chkpt: 32 epoch: 508 score: 2558 loss: -1248.44970703125 entropy: -2.8188083171844482
+
+chkpt: 32 epoch: 509 score: -2217 loss: 5714.42724609375 entropy: -2.8980958461761475
+
+chkpt: 32 epoch: 510 score: 1891 loss: 1713.8511962890625 entropy: -2.8540163040161133
+
+chkpt: 32 epoch: 511 score: -187 loss: 498.2242431640625 entropy: -2.748293399810791
+
+chkpt: 32 epoch: 512 score: 300 loss: 3098.453857421875 entropy: -2.927480459213257
+
+chkpt: 32 epoch: 513 score: -66 loss: -2125.7177734375 entropy: -2.6270925998687744
+
+chkpt: 32 epoch: 514 score: 804 loss: 1089.568115234375 entropy: -2.8800292015075684
+
+chkpt: 32 epoch: 515 score: -820 loss: 2911.390380859375 entropy: -2.9697048664093018
+
+chkpt: 32 epoch: 516 score: 426 loss: -3280.372314453125 entropy: -2.6268534660339355
+
+chkpt: 32 epoch: 517 score: -3888 loss: 7947.7802734375 entropy: -2.9071407318115234
+
+chkpt: 32 epoch: 518 score: 1329 loss: 2659.83251953125 entropy: -2.9664571285247803
+
+chkpt: 32 epoch: 519 score: -1220 loss: 7743.5888671875 entropy: -2.86783504486084
+
+chkpt: 32 epoch: 520 score: 1826 loss: 419.9714660644531 entropy: -2.9449832439422607
+
+chkpt: 32 epoch: 521 score: 1717 loss: -2909.13720703125 entropy: -2.7359931468963623
+
+chkpt: 32 epoch: 522 score: -4894 loss: 7021.482421875 entropy: -2.8463544845581055
+
+chkpt: 32 epoch: 523 score: 5066 loss: -1684.22998046875 entropy: -3.0167508125305176
+
+chkpt: 32 epoch: 524 score: -4734 loss: 7353.33544921875 entropy: -2.8428843021392822
+
+chkpt: 32 epoch: 525 score: 4061 loss: -6345.81298828125 entropy: -2.8128299713134766
+
+chkpt: 32 epoch: 526 score: -388 loss: -1420.5546875 entropy: -2.824877977371216
+
+chkpt: 32 epoch: 527 score: -3299 loss: 5927.60791015625 entropy: -2.894831657409668
+
+chkpt: 32 epoch: 528 score: -1995 loss: 11902.771484375 entropy: -2.766641855239868
+
+chkpt: 32 epoch: 529 score: 5792 loss: -2329.767578125 entropy: -2.7794811725616455
+
+chkpt: 32 epoch: 530 score: -3143 loss: 6700.83935546875 entropy: -2.8498573303222656
+
+chkpt: 32 epoch: 531 score: 2379 loss: -1631.7860107421875 entropy: -2.8617849349975586
+
+chkpt: 32 epoch: 532 score: -2719 loss: 7574.076171875 entropy: -2.7694132328033447
+
+chkpt: 32 epoch: 533 score: -600 loss: 6827.396484375 entropy: -2.7258317470550537
+
+chkpt: 32 epoch: 534 score: 4351 loss: -787.4027099609375 entropy: -2.927748918533325
+
+chkpt: 32 epoch: 535 score: -4269 loss: 7994.80859375 entropy: -2.707855224609375
+
+chkpt: 32 epoch: 536 score: 1075 loss: 2304.562255859375 entropy: -2.9009923934936523
+
+chkpt: 32 epoch: 537 score: 2160 loss: -2881.927734375 entropy: -2.5481905937194824
+
+chkpt: 32 epoch: 538 score: 2467 loss: -6778.82470703125 entropy: -2.9399847984313965
+
+chkpt: 32 epoch: 539 score: -2524 loss: 935.2603149414062 entropy: -2.8901894092559814
+
+chkpt: 32 epoch: 540 score: -2067 loss: 9127.4326171875 entropy: -2.7349157333374023
+
+chkpt: 32 epoch: 541 score: 1912 loss: -8600.3662109375 entropy: -2.6447856426239014
+
+chkpt: 32 epoch: 542 score: -4947 loss: 11737.962890625 entropy: -2.723980188369751
+
+chkpt: 32 epoch: 543 score: 2879 loss: 4986.982421875 entropy: -2.757986545562744
+
+chkpt: 32 epoch: 544 score: -152 loss: 6338.39990234375 entropy: -2.8945302963256836
+
+chkpt: 32 epoch: 545 score: 2151 loss: 507.93988037109375 entropy: -2.7808480262756348
+
+chkpt: 32 epoch: 546 score: -1563 loss: 3671.471923828125 entropy: -2.745323419570923
+
+chkpt: 32 epoch: 547 score: 2441 loss: -1061.5518798828125 entropy: -2.9407589435577393
+
+chkpt: 32 epoch: 548 score: -4166 loss: 8457.015625 entropy: -2.417518377304077
+
+chkpt: 32 epoch: 549 score: -56 loss: 6585.048828125 entropy: -2.5901501178741455
+
+chkpt: 32 epoch: 550 score: -840 loss: 13842.3984375 entropy: -2.8164191246032715
+
+chkpt: 32 epoch: 551 score: 2117 loss: 4490.79248046875 entropy: -2.757420539855957
+
+chkpt: 32 epoch: 552 score: -1488 loss: 7472.9287109375 entropy: -2.6445727348327637
+
+chkpt: 32 epoch: 553 score: 251 loss: 5633.31884765625 entropy: -2.6643571853637695
+
+chkpt: 32 epoch: 554 score: 1766 loss: 1495.375732421875 entropy: -2.823317050933838
+
+chkpt: 32 epoch: 555 score: -1028 loss: 138.86497497558594 entropy: -2.579961061477661
+
+chkpt: 32 epoch: 556 score: -901 loss: 6168.04931640625 entropy: -2.6447415351867676
+
+chkpt: 32 epoch: 557 score: 2102 loss: -4626.02001953125 entropy: -2.8260037899017334
+
+chkpt: 32 epoch: 558 score: 342 loss: 1874.5047607421875 entropy: -2.868147611618042
+
+chkpt: 32 epoch: 559 score: 1045 loss: -2801.322021484375 entropy: -2.8605823516845703
+
+chkpt: 32 epoch: 560 score: -533 loss: 1221.4913330078125 entropy: -2.9523067474365234
+
+chkpt: 32 epoch: 561 score: 585 loss: -821.2714233398438 entropy: -3.0307517051696777
+
+chkpt: 32 epoch: 562 score: -881 loss: -574.2364501953125 entropy: -2.8836493492126465
+
+chkpt: 32 epoch: 563 score: -368 loss: -1209.23193359375 entropy: -2.7456917762756348
+
+chkpt: 32 epoch: 564 score: -3435 loss: 5451.1103515625 entropy: -2.8055646419525146
+
+chkpt: 32 epoch: 565 score: 2420 loss: 554.152099609375 entropy: -2.856255531311035
+
+chkpt: 32 epoch: 566 score: -2387 loss: 7091.34423828125 entropy: -2.780653953552246
+
+chkpt: 32 epoch: 567 score: 3194 loss: -45.02485275268555 entropy: -2.9916319847106934
+
+chkpt: 32 epoch: 568 score: -987 loss: 1242.7557373046875 entropy: -2.809521198272705
+
+chkpt: 32 epoch: 569 score: 1621 loss: -4090.084228515625 entropy: -2.984938621520996
+
+chkpt: 32 epoch: 570 score: -4022 loss: 5975.1484375 entropy: -2.877427577972412
+
+chkpt: 32 epoch: 571 score: 565 loss: 6299.20654296875 entropy: -2.888577461242676
+
+chkpt: 32 epoch: 572 score: -45 loss: 5271.14306640625 entropy: -2.6436548233032227
+
+chkpt: 32 epoch: 573 score: -1186 loss: 9138.0869140625 entropy: -2.8601224422454834
+
+chkpt: 32 epoch: 574 score: 198 loss: 4900.19384765625 entropy: -2.814122438430786
+
+chkpt: 32 epoch: 575 score: 1773 loss: 1240.124267578125 entropy: -2.8139872550964355
+
+chkpt: 32 epoch: 576 score: 2293 loss: -1309.7828369140625 entropy: -2.9742238521575928
+
+chkpt: 32 epoch: 577 score: -2702 loss: 7170.75146484375 entropy: -2.8562793731689453
+
+chkpt: 32 epoch: 578 score: 550 loss: 3169.26318359375 entropy: -2.9766616821289062
+
+chkpt: 32 epoch: 579 score: -937 loss: 3638.5068359375 entropy: -2.800424337387085
+
+chkpt: 32 epoch: 580 score: 2799 loss: -2362.0771484375 entropy: -2.617459297180176
+
+chkpt: 32 epoch: 581 score: -2500 loss: 3931.361572265625 entropy: -2.973365545272827
+
+chkpt: 32 epoch: 582 score: 3595 loss: -3951.32177734375 entropy: -3.1216273307800293
+
+chkpt: 32 epoch: 583 score: -3656 loss: -52.32591247558594 entropy: -2.7952709197998047
+
+chkpt: 32 epoch: 584 score: -1516 loss: 7801.767578125 entropy: -2.835944890975952
+
+chkpt: 32 epoch: 585 score: 3859 loss: -1688.064453125 entropy: -2.9586374759674072
+
+chkpt: 32 epoch: 586 score: -3861 loss: 8242.7158203125 entropy: -2.7644906044006348
+
+chkpt: 32 epoch: 587 score: 121 loss: 6721.421875 entropy: -2.7123496532440186
+
+chkpt: 32 epoch: 588 score: 728 loss: 5292.009765625 entropy: -2.8755552768707275
+
+chkpt: 32 epoch: 589 score: -1569 loss: 13639.54296875 entropy: -2.9527571201324463
+
+chkpt: 32 epoch: 590 score: 3840 loss: -1149.2603759765625 entropy: -2.8336634635925293
+
+chkpt: 32 epoch: 591 score: -3039 loss: 11537.1923828125 entropy: -2.994041919708252
+
+chkpt: 32 epoch: 592 score: 2688 loss: 1005.0679321289062 entropy: -2.9971134662628174
+
+chkpt: 32 epoch: 593 score: 246 loss: -224.959228515625 entropy: -2.9422411918640137
+
+chkpt: 32 epoch: 594 score: -252 loss: -562.5277709960938 entropy: -2.868133544921875
+
+chkpt: 32 epoch: 595 score: -3506 loss: 5984.6044921875 entropy: -2.723130941390991
+
+chkpt: 32 epoch: 596 score: 175 loss: 4220.78759765625 entropy: -2.7364091873168945
+
+chkpt: 32 epoch: 597 score: 3210 loss: -380.7464904785156 entropy: -2.963383436203003
+
+chkpt: 32 epoch: 598 score: -705 loss: -1006.8920288085938 entropy: -2.8867299556732178
+
+chkpt: 32 epoch: 599 score: -2580 loss: 7178.185546875 entropy: -2.457660436630249
+
+chkpt: 32 epoch: 600 score: 3008 loss: -2545.506103515625 entropy: -2.882394790649414
+
+chkpt: 32 epoch: 601 score: -304 loss: -604.9212646484375 entropy: -2.9951324462890625
+
+chkpt: 32 epoch: 602 score: -1479 loss: 7288.72314453125 entropy: -2.952312469482422
+
+chkpt: 32 epoch: 603 score: 232 loss: 3616.296630859375 entropy: -2.884188413619995
+
+chkpt: 32 epoch: 604 score: 160 loss: 2099.666748046875 entropy: -2.9006757736206055
+
+chkpt: 32 epoch: 605 score: -827 loss: 4453.6611328125 entropy: -2.731771230697632
+
+chkpt: 32 epoch: 606 score: 2860 loss: -1003.290283203125 entropy: -2.9168710708618164
+
+chkpt: 32 epoch: 607 score: 366 loss: -2682.74609375 entropy: -3.090264320373535
+
+chkpt: 32 epoch: 608 score: -2200 loss: 3928.706787109375 entropy: -2.9839959144592285
+
+chkpt: 32 epoch: 609 score: 4139 loss: -10536.921875 entropy: -3.110656261444092

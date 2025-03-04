@@ -1,0 +1,16 @@
+{"time":"2025-02-23T22:35:30.766733+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"C:\\Users\\Gilad\\Markman Dropbox\\Gilad Markman\\Python\\SpaceShipRide\\wandb\\run-20250223_223530-REINFORCE-continuous 123\\logs\\debug-core.log"}
+{"time":"2025-02-23T22:35:30.9020413+02:00","level":"INFO","msg":"created new stream","id":"REINFORCE-continuous 123"}
+{"time":"2025-02-23T22:35:30.9020413+02:00","level":"INFO","msg":"stream: started","id":"REINFORCE-continuous 123"}
+{"time":"2025-02-23T22:35:30.9020413+02:00","level":"INFO","msg":"handler: started","stream_id":"REINFORCE-continuous 123"}
+{"time":"2025-02-23T22:35:30.9020413+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"REINFORCE-continuous 123"}
+{"time":"2025-02-23T22:35:30.9020413+02:00","level":"INFO","msg":"sender: started","stream_id":"REINFORCE-continuous 123"}
+{"time":"2025-02-23T22:35:31.1569317+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-23T22:35:31.1900804+02:00","level":"ERROR","msg":"error writing metadata file: open C:\\Users\\Gilad\\Markman Dropbox\\Gilad Markman\\Python\\SpaceShipRide\\wandb\\run-20250223_223530-REINFORCE-continuous 123\\files\\wandb-metadata.json: The requested operation cannot be performed on a file with a user-mapped section open."}
+{"time":"2025-02-23T22:35:39.3380572+02:00","level":"INFO","msg":"stream: closing","id":"REINFORCE-continuous 123"}
+{"time":"2025-02-23T22:35:39.3380572+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-23T22:35:39.3385608+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-23T22:35:40.0638418+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-23T22:35:40.3178146+02:00","level":"INFO","msg":"handler: closed","stream_id":"REINFORCE-continuous 123"}
+{"time":"2025-02-23T22:35:40.3178146+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"REINFORCE-continuous 123"}
+{"time":"2025-02-23T22:35:40.3185022+02:00","level":"INFO","msg":"sender: closed","stream_id":"REINFORCE-continuous 123"}
+{"time":"2025-02-23T22:35:40.3185022+02:00","level":"INFO","msg":"stream: closed","id":"REINFORCE-continuous 123"}

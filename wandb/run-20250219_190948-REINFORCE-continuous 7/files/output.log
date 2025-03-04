@@ -1,0 +1,11 @@
+0
+Traceback (most recent call last):
+  File "c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Trainer.py", line 92, in <module>
+    trainer.train(epochs=1000000)
+  File "c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Trainer.py", line 33, in train
+    action, action_tensor = self.agent.get_action(state, train=True)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Gilad\Markman Dropbox\Gilad Markman\Python\SpaceShipRide\REINFORCE_Agent.py", line 105, in get_action
+    return (F_thrust.item(), T_spin.item()), action
+            ^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'

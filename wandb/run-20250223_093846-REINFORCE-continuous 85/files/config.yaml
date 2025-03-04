@@ -1,0 +1,44 @@
+_wandb:
+    value:
+        cli_version: 0.19.6
+        m: []
+        python_version: 3.11.8
+        t:
+            "1":
+                - 1
+                - 55
+            "2":
+                - 1
+                - 55
+            "3":
+                - 14
+                - 16
+                - 23
+                - 55
+            "4": 3.11.8
+            "5": 0.19.6
+            "8":
+                - 3
+                - 5
+            "12": 0.19.6
+            "13": windows-amd64
+device:
+    value: cpu
+entropy_coe:
+    value: 0.1
+gamma:
+    value: 0.99
+lr:
+    value: 0.001
+name:
+    value: REINFORCE-continuous 85
+policy_model:
+    value: |-
+        REINFORCE_Network(
+          (linear1): Linear(in_features=14, out_features=256, bias=True)
+          (Relu): LeakyReLU(negative_slope=0.01)
+          (linear2): Linear(in_features=256, out_features=256, bias=True)
+          (linear3): Linear(in_features=256, out_features=2, bias=True)
+          (mean_layer): Linear(in_features=256, out_features=2, bias=True)
+          (std_layer): Linear(in_features=256, out_features=2, bias=True)
+        )
