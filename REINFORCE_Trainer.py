@@ -12,11 +12,11 @@ class REINFORCE_Trainer:
         self.env:SpaceShipRide = SpaceShipRide()
         self.chkpt = chkpt
 
-    def train(self, epochs=100000, gamma = 0.99, lr=0.001):
+    def train(self, epochs=100000, gamma = 0.99, lr=0.0001):
         self.init_wandb(project_name="REINFORCE-continuous",chkpt=self.chkpt,resume=False)
         
         for epoch in range(epochs):
-            state = self.env.restart()
+            self.env.restart()
             self.env.step = 0
             score = 0
             self.env.done = False
@@ -81,6 +81,7 @@ class REINFORCE_Trainer:
 
 
 if __name__ == '__main__':
+    torch.save(215, 'Data/chkpt')
     try:
         chkpt = torch.load('Data/chkpt')
     except:
@@ -90,4 +91,3 @@ if __name__ == '__main__':
     trainer = REINFORCE_Trainer(chkpt=chkpt)
     trainer.train(epochs=1000000)
     
-            

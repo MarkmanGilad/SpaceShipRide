@@ -11,8 +11,6 @@ class Human_Agent:
         T_spin = 0
         if keys[pygame.K_UP]:
             F_thrust = 0.5  # Apply continuous forward thrust
-        if keys[pygame.K_DOWN]:
-            F_thrust = -0.5  # Reverse thrust
         if keys[pygame.K_RIGHT]:
             T_spin = -0.5  # Clockwise rotation
         if keys[pygame.K_LEFT]:

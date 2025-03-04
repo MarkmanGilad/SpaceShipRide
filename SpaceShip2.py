@@ -1,77 +1,83 @@
 import pygame
 import math
+from Graphics import *
 
-# Global constants
-WIDTH, HEIGHT = 800, 600
-FPS = 60
-LIGHTGRAY = (200, 200, 200)
 
 class SpaceShip(pygame.sprite.Sprite):
-    def __init__(self, image, pos=(700, 500)) -> None:
+
+    img = pygame.image.load("img/spacecraft.png")
+    img = pygame.transform.rotate(img, 270)
+
+    def __init__(self, pos=(700, 500), size = (50,50)) -> None:
         super().__init__()
-        self.original_image = image  # Unrotated copy for proper rotation
-        self.image = image
+        self.original_image = pygame.transform.scale(SpaceShip.img, size)  # Unrotated copy for proper rotation
+        self.image = self.original_image
         self.rect = self.image.get_rect(center=pos)
-        self.radius = 15
+        self.radius = max(size[0], size[1]) // 2
         self.mask = pygame.mask.from_surface(self.image)
         self.start_pos = pos
 
         # Position and rotation
         self.centerx, self.centery = self.start_pos
-        self.theta = 0  
+        self.theta = 0 
         
         # Velocity and angular velocity
         self.vx = 0
         self.vy = 0
-        self.omega = 0  # Angular velocity
-        
+                
         # Limits
-        self.max_thrust = 150
-        self.max_spin = 3
+        self.max_acc = 1         # max acceleration pixels per frame^2
+        self.max_spin = (2 * math.pi ) / 24 # maximum spin per frame
+        self.v_opt = 5   # pixels per frame
 
         # Friction parameters
-        self.linear_friction = 0.02  # Slows down velocity
-        self.angular_friction = 0.05  # Slows down spin
-
+        self.friction = 0.05  # linear slow down friction
+        
         # Fuel system
-        self.max_fuel = 100
+        self.max_fuel = 1000
         self.fuel = self.max_fuel
-        self.fuel_burn_rate = 0.2  # Base fuel consumption per action
-        self.efficiency_factor = 0.5  # Increases at full power
+        self.fuel_burn_rate = 0.01  # Base fuel consumption per action
+        self.eff_factor = 0.1  # max efficiency at v_opt
+        self.fuel_spin_rate = 10
+        
+        
 
-    def move(self, dt, F_thrust, T_spin):
+    def move(self, thrust, spin):
         if self.fuel > 0:
             # Update angular velocity and apply friction
-            self.omega += self.max_spin * T_spin * dt
-            self.omega *= (1 - self.angular_friction)  # Angular friction
-            self.theta += self.omega * dt
-
-            # Keep theta in [0, 2*pi)
-            self.theta %= (2 * math.pi)
-
-            # Throttle is in [0,1] and only forward
-            F_thrust = max(0, min(1, F_thrust))
-
+            self.theta += self.max_spin * spin
+            self.theta %= (2 * math.pi)         # Keep theta in [0, 2*pi)
+           
             # Compute acceleration based on the forward vector
-            ax = - (self.max_thrust * F_thrust) * math.sin(self.theta)
-            ay = - (self.max_thrust * F_thrust) * math.cos(self.theta)
+            ax = (self.max_acc * thrust) * math.cos(self.theta)
+            ay = (self.max_acc * thrust) * math.sin(self.theta)
 
             # Update velocity
-            self.vx += ax * dt
-            self.vy += ay * dt
+            self.vx += ax 
+            self.vy -= ay   
 
-            # Apply linear friction
-            self.vx *= (1 - self.linear_friction)
-            self.vy *= (1 - self.linear_friction)
-
-            # Fuel consumption model
-            fuel_cost = self.fuel_burn_rate * (1 + self.efficiency_factor * (F_thrust ** 2))
-            self.fuel -= fuel_cost * dt
+            # Fuel consumption model - 
+            v = (self.vx**2 + self.vy**2)**0.5
+            efficiency_penalty = self.eff_factor * ((v - self.v_opt)**2/self.v_opt**2)
+            spin_cost = abs(spin) * self.fuel_spin_rate
+            self.fuel_cost = self.fuel_burn_rate * thrust * (1 + efficiency_penalty) + spin_cost
+            self.fuel -= self.fuel_cost
             self.fuel = max(0, self.fuel)  # Prevent negative fuel
+        
+            
+        
+        # Apply linear friction
+        self.vx *= (1 - self.friction)
+        self.vy *= (1 - self.friction)
+        
+        speed = math.sqrt(self.vx ** 2 + self.vy ** 2)
+        if speed < 0.2:  # Threshold to stop the ship
+            self.vx = 0
+            self.vy = 0
 
         # Update position
-        self.centerx += self.vx * dt
-        self.centery += self.vy * dt
+        self.centerx += self.vx 
+        self.centery += self.vy 
 
         # Keep inside screen bounds
         self.centerx = max(self.radius, min(WIDTH - self.radius, self.centerx))
@@ -88,8 +94,8 @@ class SpaceShip(pygame.sprite.Sprite):
     def draw(self, surface):
         surface.blit(self.image, self.rect)
 
-    def update(self, dt, F_thrust, T_spin):
-        self.move(dt, F_thrust, T_spin)
+    def update(self,thrust, spin):
+        self.move(thrust, spin)
 
     def restart(self):
         self.theta = 0  

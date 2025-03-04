@@ -7,7 +7,8 @@ import torch.nn.functional as F
 from torch.distributions import Normal
 
 
-class Memory:
+
+class Memory: 
     '''
     the memory get tensors onlt
     '''
@@ -15,7 +16,7 @@ class Memory:
         self.states = []
         self.actions = []
         self.rewards = []
-        self.divice = device
+        self.device = device
     
     def store_memory (self, state, action, reward):
         self.states.append(state)
@@ -28,20 +29,19 @@ class Memory:
         self.rewards = []
     
     def get_tensors(self):
-        states_tensor = torch.stack(self.states).to(self.divice)
-        actions_tensor = torch.stack(self.actions).to(self.divice)
-        rewards_tensor = torch.stack(self.rewards).to(self.divice)
+        states_tensor = torch.stack(self.states).to(self.device)
+        actions_tensor = torch.stack(self.actions).to(self.device)
+        rewards_tensor = torch.stack(self.rewards).to(self.device)
         self.clear_memory()
         return states_tensor, actions_tensor, rewards_tensor
     
 
 class REINFORCE_Network (nn.Module):
-    def __init__(self, state_dim, action_dim, lr=0.001, fc_dims=256, chkpt=1, optim_step = 100, optim_gamma = 0.9):
+    def __init__(self, state_dim, action_dim, lr=0.00001, fc_dims=256, chkpt=1, optim_step = 100, optim_gamma = 0.9):
         super().__init__()
         self.linear1 = nn.Linear(state_dim, fc_dims)
-        self.Relu = nn.LeakyReLU()
+        self.relu = nn.ReLU()
         self.linear2 = nn.Linear(fc_dims, fc_dims)
-        self.linear3 = nn.Linear(fc_dims, action_dim)
         self.mean_layer = nn.Linear(fc_dims, action_dim)
         self.std_layer = nn.Linear(fc_dims, action_dim)
         self.lr = lr
@@ -53,24 +53,24 @@ class REINFORCE_Network (nn.Module):
         
         
     def forward(self, state):
-        x = self.linear1(state)
-        x = self.Relu(x)
-        x = self.linear2(x)
-        x = self.Relu(x)
+        x = self.relu(self.linear1(state))
+        x = self.relu(self.linear2(x))
+
         mean = self.mean_layer(x)
-        # mean = torch.tanh(mean)
-        std = F.softplus(self.std_layer(x)) + 1e-6
+        mean[:, 0] = (torch.tanh(mean[:, 0]) + 1) / 2       # Thrust: [0,1]
+        mean[:, 1] = torch.tanh(mean[:, 1])                 # Spin: [-1,1]
+        std = F.softplus(self.std_layer(x)) + 1e-6          # Ensure std is positive
         return mean, std
     
     def load_params(self):
-        self.load_state_dict(torch.load(self.checkpoint_file, weights_only=True))
+        self.load_state_dict(torch.load(self.checkpoint_file))
 
     def save_params(self):
         torch.save(self.state_dict(), self.checkpoint_file)
 
 
 class REINFORCE_Agent:
-    def __init__(self, chkpt, player = 1, state_dim = 14, action_dim=2  ):
+    def __init__(self, chkpt, player = 1, state_dim = 11, action_dim=2  ):
         self.policy = REINFORCE_Network(chkpt=chkpt, state_dim=state_dim, action_dim=action_dim)
         self.player = player
         self.memory = Memory(self.policy.device)
@@ -94,12 +94,16 @@ class REINFORCE_Agent:
         self.policy.load_params()
 
     def get_action(self, state, events = None, train = False):
-        state_tensor = state.to(self.policy.device)
+        state_tensor = state.to(self.policy.device).view(1,-1)
         with torch.no_grad():
             mean, std = self.policy(state_tensor)
-        
+        mean = mean.squeeze(0)
+        std = std.squeeze(0)
         dist = Normal(mean, std)
         action = dist.rsample()
+        action = action.clamp(min=torch.tensor([0, -1], device=self.policy.device),
+                              max=torch.tensor([1, 1], device=self.policy.device))
+        
         F_thrust, T_spin = action[0].item(), action[1].item()
 
         if train:
@@ -151,7 +155,5 @@ class REINFORCE_Agent:
     def __call__(self, *args, **kwds):
         return self.get_action(*args)
 
-
-    
 
     

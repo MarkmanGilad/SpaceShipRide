@@ -20,7 +20,8 @@ class Star (pygame.sprite.Sprite):
         self.rect.center = x, y
     
     def update(self):
-        self.move()
+        return
+        # self.move()
         
 
         
