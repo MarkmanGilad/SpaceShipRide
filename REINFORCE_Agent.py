@@ -6,8 +6,6 @@ import torch.optim as optim
 import torch.nn.functional as F
 from torch.distributions import Normal
 
-
-
 class Memory: 
     '''
     the memory get tensors onlt
@@ -34,7 +32,6 @@ class Memory:
         rewards_tensor = torch.stack(self.rewards).to(self.device)
         self.clear_memory()
         return states_tensor, actions_tensor, rewards_tensor
-    
 
 class REINFORCE_Network (nn.Module):
     def __init__(self, state_dim, action_dim, lr=0.00001, fc_dims=256, chkpt=1, optim_step = 100, optim_gamma = 0.9):
@@ -57,9 +54,9 @@ class REINFORCE_Network (nn.Module):
         x = self.relu(self.linear2(x))
 
         mean_raw = self.mean_layer(x)
-        thrust = (torch.tanh(mean_raw[:, 0]) + 1) / 2  # Thrust in [0,1]
-        spin = torch.tanh(mean_raw[:, 1])              # Spin in [-1,1]
-        mean = torch.stack([thrust, spin], dim=1)
+        thrust_mean = (torch.tanh(mean_raw[:, 0]) + 1) / 2  # Thrust in [0,1]
+        spin_mean = torch.tanh(mean_raw[:, 1])              # Spin in [-1,1]
+        mean = torch.stack([thrust_mean, spin_mean], dim=1)
         std = F.softplus(self.std_layer(x)) + 1e-6          # Ensure std is positive
         return mean, std
     
@@ -68,7 +65,6 @@ class REINFORCE_Network (nn.Module):
 
     def save_params(self):
         torch.save(self.state_dict(), self.checkpoint_file)
-
 
 class REINFORCE_Agent:
     def __init__(self, chkpt, player = 1, state_dim = 11, action_dim=2  ):

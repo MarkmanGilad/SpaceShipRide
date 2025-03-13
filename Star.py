@@ -2,6 +2,7 @@ import pygame
 from Graphics import *
 
 class Star (pygame.sprite.Sprite):
+        
     def __init__(self, img, pos = (300,300), scale = (60,60), radius = 20) -> None:
         super().__init__()
         self.image = img

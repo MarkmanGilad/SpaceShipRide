@@ -53,8 +53,6 @@ class SpaceShipRide:
         self.space_ship.eff_factor = 0.1  # Increases at full power
         self.space_ship.fuel_spin_rate = 10  # Fuel cost multiplier for spin
 
-        
-        
 
     def render (self, action):
         thrust, spin = action

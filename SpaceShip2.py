@@ -61,8 +61,6 @@ class SpaceShip(pygame.sprite.Sprite):
             self.fuel -= self.fuel_cost
             self.fuel = max(0, self.fuel)  # Prevent negative fuel
         
-            
-        
         # Apply linear friction
         self.vx *= (1 - self.friction)
         self.vy *= (1 - self.friction)
