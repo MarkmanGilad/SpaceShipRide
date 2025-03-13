@@ -34,7 +34,7 @@ class Memory:
         return states_tensor, actions_tensor, rewards_tensor
 
 class REINFORCE_Network (nn.Module):
-    def __init__(self, state_dim, action_dim, lr=0.00001, fc_dims=256, chkpt=1, optim_step = 100, optim_gamma = 0.9):
+    def __init__(self, state_dim, action_dim, lr=0.00001, fc_dims=256, chkpt=1):
         super().__init__()
         self.linear1 = nn.Linear(state_dim, fc_dims)
         self.relu = nn.ReLU()
@@ -43,11 +43,9 @@ class REINFORCE_Network (nn.Module):
         self.std_layer = nn.Linear(fc_dims, action_dim)
         self.lr = lr
         self.optimizer = optim.Adam(self.parameters(), lr=lr)  
-        # self.scheduler = optim.lr_scheduler.StepLR(self.optimizer, step_size=optim_step, gamma=optim_gamma)
         self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
         self.to(self.device)
         self.checkpoint_file = f'Data/REINFORCE{chkpt}.pth'
-        
         
     def forward(self, state):
         x = self.relu(self.linear1(state))

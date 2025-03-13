@@ -1,7 +1,7 @@
 
 import pygame
 from Graphics import *
-from SpaceShip2 import SpaceShip
+from SpaceShip import SpaceShip
 import torch
 from Human_Agent import Human_Agent
 from REINFORCE_Agent import REINFORCE_Agent

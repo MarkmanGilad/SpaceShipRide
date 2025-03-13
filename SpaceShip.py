@@ -1,83 +1,103 @@
 import pygame
 import math
+from Graphics import *
 
-# Global constants
-WIDTH, HEIGHT = 800, 600
-FPS = 60
-LIGHTGRAY = (200, 200, 200)
-
-import pygame
-import math
-
-# Global constants
-WIDTH, HEIGHT = 800, 600
-FPS = 60
-LIGHTGRAY = (200, 200, 200)
 
 class SpaceShip(pygame.sprite.Sprite):
-    def __init__(self, image, pos = (700, 500)) -> None:
+
+    img = pygame.image.load("img/spacecraft.png")
+    img = pygame.transform.rotate(img, 270)
+
+    def __init__(self, pos=(700, 500), size = (50,50)) -> None:
         super().__init__()
-        self.original_image = image  # Unrotated copy for proper rotation
-        self.image = image
+        self.original_image = pygame.transform.scale(SpaceShip.img, size)  # Unrotated copy for proper rotation
+        self.image = self.original_image
         self.rect = self.image.get_rect(center=pos)
-        self.radius = 30
+        self.radius = max(size[0], size[1]) // 2
         self.mask = pygame.mask.from_surface(self.image)
         self.start_pos = pos
-        # Define theta relative to up (0 means facing up)
+
+        # Position and rotation
         self.centerx, self.centery = self.start_pos
-        self.theta = 0  
+        self.theta = 0 
+        
+        # Velocity and angular velocity
         self.vx = 0
         self.vy = 0
-        self.omega = 0  # Angular velocity
+                
+        # Limits
+        self.max_acc = 1         # max acceleration pixels per frame^2
+        self.max_spin = (2 * math.pi ) / 24 # maximum spin per frame
+        self.v_opt = 2   # pixels per frame
+
+        # Friction parameters
+        self.friction = 0.05  # linear slow down friction
         
-        self.max_thrust = 100
-        self.max_spin = 1
+        # Fuel system
+        self.max_fuel = 1000
+        self.fuel = self.max_fuel
+        
+        
 
-    def move(self, dt, F_thrust, T_spin):
-        # Update angular velocity and angle
-        self.omega = self.max_spin * T_spin
-        self.theta += self.omega * dt
+    def move(self, thrust, spin):
+        if self.fuel > 0:
+            # Update angular velocity and apply friction
+            self.theta += self.max_spin * spin
+            self.theta %= (2 * math.pi)         # Keep theta in [0, 2*pi)
+           
+            # Compute acceleration based on the forward vector
+            ax = (self.max_acc * thrust) * math.cos(self.theta)
+            ay = (self.max_acc * thrust) * math.sin(self.theta)
 
-        # Constrain theta to [0, 2*pi)
-        self.theta %= (2 * math.pi)
+            # Update velocity
+            self.vx += ax 
+            self.vy -= ay   
 
-        # Constarint F-thrust
-        F_thrust = max(-1, min(1, F_thrust))
-
-        # Compute acceleration based on the corrected forward vector
-        ax = - (self.max_thrust * F_thrust) * math.sin(self.theta)
-        ay = - (self.max_thrust * F_thrust) * math.cos(self.theta)
-
-        # Update velocity
-        self.vx += ax * dt
-        self.vy += ay * dt
+            # Fuel consumption model - 
+            v = (self.vx**2 + self.vy**2)**0.5
+            efficiency_penalty = self.eff_factor * ((v - self.v_opt)**2/self.v_opt**2)
+            spin_cost = abs(spin) * self.fuel_spin_rate
+            self.fuel_cost = self.fuel_burn_rate * thrust * (1 + efficiency_penalty) + spin_cost
+            self.fuel -= self.fuel_cost
+            self.fuel = max(0, self.fuel)  # Prevent negative fuel
+        
+        # Apply linear friction
+        self.vx *= (1 - self.friction)
+        self.vy *= (1 - self.friction)
+        
+        speed = math.sqrt(self.vx ** 2 + self.vy ** 2)
+        if speed < 0.2:  # Threshold to stop the ship
+            self.vx = 0
+            self.vy = 0
 
         # Update position
-        dx = self.vx * dt
-        dy = self.vy * dt
+        self.centerx += self.vx 
+        self.centery += self.vy 
 
-        self.centerx += dx
-        self.centery += dy
+        # Keep inside screen bounds
+        self.centerx = max(self.radius, min(WIDTH - self.radius, self.centerx))
+        self.centery = max(self.radius, min(HEIGHT - self.radius, self.centery))
 
         self.rect.centerx = round(self.centerx)
         self.rect.centery = round(self.centery)
-        
 
         # Rotate the image to match the current theta
         rotated_image = pygame.transform.rotate(self.original_image, math.degrees(self.theta))
         self.image = rotated_image
         self.rect = self.image.get_rect(center=self.rect.center)
+        self.mask = pygame.mask.from_surface(self.image)
 
     def draw(self, surface):
         surface.blit(self.image, self.rect)
 
-    def update(self, dt, F_thrust, T_spin):
-        self.move(dt, F_thrust, T_spin)
+    def update(self,thrust, spin):
+        self.move(thrust, spin)
 
     def restart(self):
         self.theta = 0  
         self.vx = 0
         self.vy = 0
         self.omega = 0  # Angular velocity
+        self.fuel = self.max_fuel  # Reset fuel
         self.centerx, self.centery = self.start_pos
         self.rect.center = self.start_pos
