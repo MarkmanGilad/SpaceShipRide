@@ -99,11 +99,11 @@ class REINFORCE_Agent:
         action = action.clamp(min=torch.tensor([0, -1], device=self.policy.device),
                               max=torch.tensor([1, 1], device=self.policy.device))
         
-        F_thrust, T_spin = action[0].item(), action[1].item()
+        thrust, spin = action[0].item(), action[1].item()
 
         if train:
-            return (F_thrust, T_spin), action
-        return F_thrust, T_spin
+            return (thrust, spin), action
+        return thrust, spin
     
     def get_dist (self, states_tensor):
         states_tensor = states_tensor.to(self.policy.device)

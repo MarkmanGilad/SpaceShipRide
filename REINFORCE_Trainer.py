@@ -38,7 +38,6 @@ class REINFORCE_Trainer:
 
             
             ########### train ###########
-            # print (f"\nstep: {self.env.step} reward: {self.env.get_reward()} ")
             self.agent.learn()
 
             ########### log ###########
@@ -53,8 +52,7 @@ class REINFORCE_Trainer:
                 if epoch %  100 == 0:
                     self.log_wandb(wins=wins)
                     wins = 0    
-
-                    
+                  
 
 
         self.agent.save_model()
